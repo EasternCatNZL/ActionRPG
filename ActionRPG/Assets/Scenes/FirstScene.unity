@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: {fileID: 1151493666690624, guid: d632d03fdc39ad745b16586a3d5315c5, type: 2}
-  mouseTargetPos: {fileID: 0}
+  mouseTargetPos: {x: 0, y: 0, z: 0}
   rayLength: 50
   myMask:
     serializedVersion: 2
@@ -472,6 +472,7 @@ GameObject:
   - component: {fileID: 2118821902}
   - component: {fileID: 2118821901}
   - component: {fileID: 2118821900}
+  - component: {fileID: 2118821904}
   m_Layer: 0
   m_Name: CharacterDummy
   m_TagString: Untagged
@@ -544,3 +545,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2118821904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2118821899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cabae49ef23882240853df3c49df6393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicBullet: {fileID: 1619636571686400, guid: 0f243e14a9395624c852e5f4fec9fc40,
+    type: 2}

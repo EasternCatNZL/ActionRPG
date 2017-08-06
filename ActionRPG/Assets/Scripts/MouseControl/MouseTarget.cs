@@ -9,7 +9,7 @@ public class MouseTarget : MonoBehaviour {
 
     //transform for other scripts
     [HideInInspector]
-    public Transform mouseTargetPos;
+    public Vector3 mouseTargetPos;
 
     //raycast stuff
     public float rayLength; //length of ray
@@ -24,19 +24,23 @@ public class MouseTarget : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
-        GetWorldMousePos();
+        
+        //GetWorldMousePos();
 	}
 
     //return the position in world floor surface that the mouse is at
-    void GetWorldMousePos()
+    public void GetWorldMousePos()
     {
         //send a ray from the position of mouse on screen
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out rayHit, rayLength, myMask))
         {
-            GameObject clone = thing;
-            Instantiate(clone, rayHit.point, Quaternion.identity);
+            //dubug spawn object
+            //GameObject clone = thing;
+            //Instantiate(clone, rayHit.point, Quaternion.identity);
+
+            //set the mouse screen to world pos
+            mouseTargetPos = rayHit.point;
         }
     }
 }
