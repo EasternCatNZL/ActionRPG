@@ -18,6 +18,4 @@ public class BasicLineShot : MonoBehaviour {
 	void Update () {
         myRigid.position += transform.forward * flightSpeed;
 	}
-
-   
 }

@@ -558,3 +558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicBullet: {fileID: 1619636571686400, guid: 0f243e14a9395624c852e5f4fec9fc40,
     type: 2}
+  biggerBullet: {fileID: 1151493666690624, guid: d632d03fdc39ad745b16586a3d5315c5,
+    type: 2}
+  lineIndicator: {fileID: 1680484551350064, guid: 5ef1a9f85797d1842b69087cd57800d1,
+    type: 2}
+  circleIndicator: {fileID: 1898195190748204, guid: e7a04e3d8dfbc1d41baf4b2af69d24a5,
+    type: 2}
