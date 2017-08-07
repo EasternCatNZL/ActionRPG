@@ -21,7 +21,7 @@ public class IndicatorBehaviour : MonoBehaviour {
         AlignIndicator();
 
         //if mouse input, destoy self
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
         {
             Destroy(gameObject);
         }

@@ -11,17 +11,18 @@ public class SpellActivationBehaviour : MonoBehaviour {
     [Header("Bullet objects")]
     public GameObject basicBullet;
     public GameObject biggerBullet;
+    public GameObject spellTwo;
 
     //indicator objects, displays on the ground
     [Header("Indicators")]
     public GameObject lineIndicator; //for line shots
     public GameObject circleIndicator; //for circle target shots
 
-    private GameObject currentIndicatorRef; //reference to currently active indicator
-
     //control bools
     private bool isReadyingSpell; //checks if currently preparing spell
-    private bool spellOnePreparing; //checks if spell is currently being prepared
+    //checks if spell is currently being prepared
+    private bool spellOnePreparing; 
+    private bool spellTwoPreparing; 
 
     // Use this for initialization
     void Start () {
@@ -45,6 +46,10 @@ public class SpellActivationBehaviour : MonoBehaviour {
             else if (Input.GetKeyDown(KeyCode.W))
             {
                 PrepareSpellOne();
+            }
+            else if (Input.GetKeyDown(KeyCode.E))
+            {
+                PrepareSpellTwo();
             }
         }
 		
@@ -74,8 +79,6 @@ public class SpellActivationBehaviour : MonoBehaviour {
         GameObject indicatorClone = lineIndicator;
         //set clones player ref to this
         indicatorClone.GetComponent<IndicatorBehaviour>().player = this.gameObject;
-        //set current indicator ref to this indicator
-        currentIndicatorRef = indicatorClone;
         //get rotation from player to mouse pos
         mouseTarget.GetWorldMousePos();
         Vector3 directionToFire = mouseTarget.mouseTargetPos - transform.position;
@@ -103,6 +106,39 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Instantiate(bulletClone, transform.position, rotationDirection);
     }
 
+    //prepare spell 2
+    void PrepareSpellTwo()
+    {
+        //change control bools to true
+        isReadyingSpell = true;
+        spellTwoPreparing = true;
+        //create a clone of the indicator object
+        GameObject indicatorClone = circleIndicator;
+        //set clones player ref to this
+        indicatorClone.GetComponent<IndicatorBehaviour>().player = this.gameObject;
+        //get rotation from player to mouse pos
+        mouseTarget.GetWorldMousePos();
+        Vector3 directionToFire = mouseTarget.mouseTargetPos - transform.position;
+        Quaternion rotationDirection = new Quaternion();
+        rotationDirection = Quaternion.LookRotation(directionToFire);
+        //spawn the indicator into the world
+        Instantiate(indicatorClone, mouseTarget.mouseTargetPos, rotationDirection);
+    }
+
+    //use spell two
+    void UseSpellTwo()
+    {
+        //turn preparing spell off
+        isReadyingSpell = false;
+        spellTwoPreparing = false;
+        //get the location of target
+        mouseTarget.GetWorldMousePos();
+        //create spell and fire it
+        GameObject spellClone = spellTwo;
+        //spawn into the world
+        Instantiate(spellClone, mouseTarget.mouseTargetPos, Quaternion.identity);
+    }
+
     //when pressing mouse left click to confirm spell usage
     void UseSpell()
     {
@@ -113,6 +149,10 @@ public class SpellActivationBehaviour : MonoBehaviour {
             if (spellOnePreparing)
             {
                 UseSpellOne();
+            }
+            else if (spellTwoPreparing)
+            {
+                UseSpellTwo();
             }
         }
     }
