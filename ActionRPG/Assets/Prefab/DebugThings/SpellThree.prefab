@@ -64,11 +64,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1878716221031060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a80bc62e1c9244bb324dc3519281e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 50331fa680831214c9668346bc290400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thingsInArea: []
-  enemies: []
-  effectRadius: 2
-  pushForce: 5
-  upwardPull: 1
+  effectRadius: 4
+  pushForce: 3
+  upwardPull: 5

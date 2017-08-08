@@ -5,8 +5,8 @@ using UnityEngine;
 public class CirclePushOut : MonoBehaviour {
 
     //array of enemies in area
-    public Collider[] thingsInArea = new Collider[0];
-    public List<GameObject> enemies = new List<GameObject>();
+    private Collider[] thingsInArea = new Collider[0];
+    private List<GameObject> enemies = new List<GameObject>();
 
     [Header("Spell vars")]
     public float effectRadius = 4.0f;
@@ -46,13 +46,10 @@ public class CirclePushOut : MonoBehaviour {
         for (int i = 0; i < enemies.Count; i++)
         {
             //get a directional vector towards center of circle and slightly up
-            //Vector3 slightlyUp = new Vector3(transform.position.x, transform.position.y + upwardPull, transform.position.z);
             Vector3 slightlyUp = new Vector3(enemies[i].transform.position.x, enemies[i].transform.position.y + upwardPull, enemies[i].transform.position.z);
-            //Vector3 directionToPush =  enemies[i].transform.position - slightlyUp;
             Vector3 directionToPush = slightlyUp - transform.position;
-
             //apply a force to the body
-            enemies[i].GetComponent<Rigidbody>().AddForce(directionToPush, ForceMode.Impulse);
+            enemies[i].GetComponent<Rigidbody>().AddForce(directionToPush * pushForce, ForceMode.Impulse);
         }
     }
 
@@ -62,6 +59,6 @@ public class CirclePushOut : MonoBehaviour {
         //does all logic then destroys self
         GetAllInArea();
         PushOut();
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 }

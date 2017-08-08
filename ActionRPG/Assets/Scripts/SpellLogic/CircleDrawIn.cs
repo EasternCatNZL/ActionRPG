@@ -5,8 +5,8 @@ using UnityEngine;
 public class CircleDrawIn : MonoBehaviour {
 
     //array of enemies in area
-    public Collider[] thingsInArea = new Collider[0];
-    public List<GameObject> enemies = new List<GameObject>();
+    private Collider[] thingsInArea = new Collider[0];
+    private List<GameObject> enemies = new List<GameObject>();
 
     [Header("Spell vars")]
     public float effectRadius = 4.0f;
@@ -23,6 +23,7 @@ public class CircleDrawIn : MonoBehaviour {
         
 	}
 
+    //finds all enemies in area of effect
     private void GetAllInArea()
     {
         //get every collider in radius of effect
@@ -48,7 +49,7 @@ public class CircleDrawIn : MonoBehaviour {
             Vector3 slightlyUp = new Vector3(transform.position.x, transform.position.y + upwardPull, transform.position.z);
             Vector3 directionToPull = slightlyUp - enemies[i].transform.position;
             //apply a force to the body
-            enemies[i].GetComponent<Rigidbody>().AddForce(directionToPull, ForceMode.Impulse);
+            enemies[i].GetComponent<Rigidbody>().AddForce(directionToPull * pullForce, ForceMode.Impulse);
         }
     }
 

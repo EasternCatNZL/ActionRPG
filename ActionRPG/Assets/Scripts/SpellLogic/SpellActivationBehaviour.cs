@@ -13,6 +13,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
     public GameObject biggerBullet;
     public GameObject spellTwo;
     public GameObject spellThree;
+    public GameObject spellFour;
 
     //indicator objects, displays on the ground
     [Header("Indicators")]
@@ -33,16 +34,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //if ready to use spell, look for use input
-        if (isReadyingSpell)
-        {
-            UseSpell();
-        }
-        //else, check for prep input
-        else
-        {
-            PrepareSpell();
-        }
+        UseSpell();
 	}
 
     //fire basic shot in the direction of the mouse in world
@@ -59,6 +51,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Instantiate(bulletClone, transform.position, rotationDirection);
     }
 
+    /*
     //prepares to fire spell 1
     void PrepareSpellOne()
     {
@@ -77,13 +70,11 @@ public class SpellActivationBehaviour : MonoBehaviour {
         //spawn the indicator into the world
         Instantiate(indicatorClone, mouseTarget.mouseTargetPos, rotationDirection);
     }
+    */
 
-    //uses spell 1
+    //uses spell 1 - big shot
     void UseSpellOne()
     {
-        //turn preparing spell off
-        isReadyingSpell = false;
-        spellOnePreparing = false;
         //get the direction of mouse from self
         mouseTarget.GetWorldMousePos();
         Vector3 directionToFire = mouseTarget.mouseTargetPos - transform.position;
@@ -96,6 +87,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Instantiate(bulletClone, transform.position, rotationDirection);
     }
 
+    /*
     //prepare spell 2
     void PrepareSpellTwo()
     {
@@ -114,13 +106,11 @@ public class SpellActivationBehaviour : MonoBehaviour {
         //spawn the indicator into the world
         Instantiate(indicatorClone, mouseTarget.mouseTargetPos, rotationDirection);
     }
+    */
 
-    //use spell two
+    //use spell two - pull in
     void UseSpellTwo()
     {
-        //turn preparing spell off
-        isReadyingSpell = false;
-        spellTwoPreparing = false;
         //get the location of target
         mouseTarget.GetWorldMousePos();
         //create spell and fire it
@@ -129,6 +119,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Instantiate(spellClone, mouseTarget.mouseTargetPos, Quaternion.identity);
     }
 
+    /*
     //prepare spell 3
     void PrepareSpellThree()
     {
@@ -147,13 +138,11 @@ public class SpellActivationBehaviour : MonoBehaviour {
         //spawn the indicator into the world
         Instantiate(indicatorClone, mouseTarget.mouseTargetPos, rotationDirection);
     }
+    */
 
-    //use spell three
+    //use spell three - push away
     void UseSpellThree()
     {
-        //turn preparing spell off
-        isReadyingSpell = false;
-        spellThreePreparing = false;
         //get the location of target
         mouseTarget.GetWorldMousePos();
         //create spell and fire it
@@ -162,8 +151,19 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Instantiate(spellClone, mouseTarget.mouseTargetPos, Quaternion.identity);
     }
 
-    //when pressing keyboard keys, prepare spell
-    void PrepareSpell()
+    //use spell four - lift and drop
+    void UseSpellFour()
+    {
+        //get the location of target
+        mouseTarget.GetWorldMousePos();
+        //create spell and fire it
+        GameObject spellClone = spellFour;
+        //spawn into the world
+        Instantiate(spellClone, mouseTarget.mouseTargetPos, Quaternion.identity);
+    }
+
+    //when pressing keyboard keys, use spell
+    void UseSpell()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -171,37 +171,44 @@ public class SpellActivationBehaviour : MonoBehaviour {
         }
         else if (Input.GetKeyDown(KeyCode.W))
         {
-            PrepareSpellOne();
+            //PrepareSpellOne();
+            UseSpellOne();
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
-            PrepareSpellTwo();
+            //PrepareSpellTwo();
+            UseSpellTwo();
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
-            PrepareSpellThree();
+            //PrepareSpellThree();
+            UseSpellThree();
+        }
+        else if (Input.GetKeyDown(KeyCode.T))
+        {
+            UseSpellFour();
         }
     }
 
-    //when pressing mouse left click to confirm spell usage
-    void UseSpell()
-    {
-        //check for mouse left click input
-        if (Input.GetMouseButtonDown(0))
-        {
-            //check for spells prepared
-            if (spellOnePreparing)
-            {
-                UseSpellOne();
-            }
-            else if (spellTwoPreparing)
-            {
-                UseSpellTwo();
-            }
-            else if (spellThreePreparing)
-            {
-                UseSpellThree();
-            }
-        }
-    }
+    ////when pressing mouse left click to confirm spell usage
+    //void UseSpell()
+    //{
+    //    //check for mouse left click input
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        //check for spells prepared
+    //        if (spellOnePreparing)
+    //        {
+    //            UseSpellOne();
+    //        }
+    //        else if (spellTwoPreparing)
+    //        {
+    //            UseSpellTwo();
+    //        }
+    //        else if (spellThreePreparing)
+    //        {
+    //            UseSpellThree();
+    //        }
+    //    }
+    //}
 }
