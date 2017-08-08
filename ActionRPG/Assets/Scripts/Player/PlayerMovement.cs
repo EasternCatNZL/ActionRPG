@@ -8,12 +8,14 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float Speed = 5.0f;
-    public float CurrentSpeed = 0.0f;
+    private float CurrentSpeed = 0.0f;
     [Range(0, 1)]
     public float TurnRate = 0.2f; //Must be set between 1 - 0
 
     private Vector3 Direction;
     private Vector3 PrevDirection;
+
+    private Vector3 MovePosition;
 
     private Rigidbody Rigid;
 
@@ -39,16 +41,11 @@ public class PlayerMovement : MonoBehaviour
             RaycastHit hit;
             Physics.Raycast(ray, out hit, Mathf.Infinity);
 
+            MovePosition = hit.point;
+
             Direction += hit.point - transform.position;
 
-            //Accumlate Direction so the model doesn't snap back
-            //Direction.x += state.ThumbSticks.Left.X;
-            //Direction.z += state.ThumbSticks.Left.Y;
-
-
-           Direction.Normalize();
-
-            Debug.DrawRay(this.transform.position, Direction * 5, Color.red);
+            Direction.Normalize();
 
             //Player Rotations
             if (Vector3.Dot(transform.right, Direction) < 0.0f)
@@ -60,12 +57,21 @@ public class PlayerMovement : MonoBehaviour
                 transform.Rotate(0.0f, Vector3.Angle(transform.forward, Direction) * TurnRate, 0.0f);
             }
             //Move the player forward
-            print(Vector3.Distance(transform.position, hit.point));
+            
             if (Mathf.Abs(Vector3.Distance(transform.position, hit.point)) > 0.7f)
             {
                 Rigid.MovePosition(transform.position + transform.forward * CurrentSpeed * Time.deltaTime);
             }
 
         }
+        if(Vector3.Distance(transform.position, MovePosition) > 0.7f)
+        {
+            print(Vector3.Distance(transform.position, MovePosition));
+            Direction += MovePosition - transform.position;
+
+            Direction.Normalize();
+            Rigid.MovePosition(transform.position + Direction * CurrentSpeed * Time.deltaTime);
+        }
+        Debug.DrawLine(transform.position, MovePosition, Color.red);
     }
 }
