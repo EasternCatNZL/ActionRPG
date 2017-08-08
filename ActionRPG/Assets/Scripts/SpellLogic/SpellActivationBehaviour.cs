@@ -8,10 +8,11 @@ public class SpellActivationBehaviour : MonoBehaviour {
     private MouseTarget mouseTarget;
 
     //bullet object
-    [Header("Bullet objects")]
+    [Header("Spell objects")]
     public GameObject basicBullet;
     public GameObject biggerBullet;
     public GameObject spellTwo;
+    public GameObject spellThree;
 
     //indicator objects, displays on the ground
     [Header("Indicators")]
@@ -22,7 +23,8 @@ public class SpellActivationBehaviour : MonoBehaviour {
     private bool isReadyingSpell; //checks if currently preparing spell
     //checks if spell is currently being prepared
     private bool spellOnePreparing; 
-    private bool spellTwoPreparing; 
+    private bool spellTwoPreparing;
+    private bool spellThreePreparing;
 
     // Use this for initialization
     void Start () {
@@ -39,20 +41,8 @@ public class SpellActivationBehaviour : MonoBehaviour {
         //else, check for prep input
         else
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                FireBasicShot();
-            }
-            else if (Input.GetKeyDown(KeyCode.W))
-            {
-                PrepareSpellOne();
-            }
-            else if (Input.GetKeyDown(KeyCode.E))
-            {
-                PrepareSpellTwo();
-            }
+            PrepareSpell();
         }
-		
 	}
 
     //fire basic shot in the direction of the mouse in world
@@ -139,6 +129,60 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Instantiate(spellClone, mouseTarget.mouseTargetPos, Quaternion.identity);
     }
 
+    //prepare spell 3
+    void PrepareSpellThree()
+    {
+        //change control bools to true
+        isReadyingSpell = true;
+        spellThreePreparing = true;
+        //create a clone of the indicator object
+        GameObject indicatorClone = circleIndicator;
+        //set clones player ref to this
+        indicatorClone.GetComponent<IndicatorBehaviour>().player = this.gameObject;
+        //get rotation from player to mouse pos
+        mouseTarget.GetWorldMousePos();
+        Vector3 directionToFire = mouseTarget.mouseTargetPos - transform.position;
+        Quaternion rotationDirection = new Quaternion();
+        rotationDirection = Quaternion.LookRotation(directionToFire);
+        //spawn the indicator into the world
+        Instantiate(indicatorClone, mouseTarget.mouseTargetPos, rotationDirection);
+    }
+
+    //use spell three
+    void UseSpellThree()
+    {
+        //turn preparing spell off
+        isReadyingSpell = false;
+        spellThreePreparing = false;
+        //get the location of target
+        mouseTarget.GetWorldMousePos();
+        //create spell and fire it
+        GameObject spellClone = spellThree;
+        //spawn into the world
+        Instantiate(spellClone, mouseTarget.mouseTargetPos, Quaternion.identity);
+    }
+
+    //when pressing keyboard keys, prepare spell
+    void PrepareSpell()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            FireBasicShot();
+        }
+        else if (Input.GetKeyDown(KeyCode.W))
+        {
+            PrepareSpellOne();
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            PrepareSpellTwo();
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            PrepareSpellThree();
+        }
+    }
+
     //when pressing mouse left click to confirm spell usage
     void UseSpell()
     {
@@ -153,6 +197,10 @@ public class SpellActivationBehaviour : MonoBehaviour {
             else if (spellTwoPreparing)
             {
                 UseSpellTwo();
+            }
+            else if (spellThreePreparing)
+            {
+                UseSpellThree();
             }
         }
     }
