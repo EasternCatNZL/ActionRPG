@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseTarget : MonoBehaviour {
 
     //debug thing
-    public GameObject thing;
+    //public GameObject thing;
 
     //transform for other scripts
     [HideInInspector]
