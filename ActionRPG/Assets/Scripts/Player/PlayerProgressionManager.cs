@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStatus : MonoBehaviour {
+public class PlayerProgressionManager : MonoBehaviour {
+
+
 
 	// Use this for initialization
 	void Start () {
