@@ -66,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if(Vector3.Distance(transform.position, MovePosition) > 0.7f)
         {
-            print(Vector3.Distance(transform.position, MovePosition));
             Direction += MovePosition - transform.position;
 
             Direction.Normalize();
