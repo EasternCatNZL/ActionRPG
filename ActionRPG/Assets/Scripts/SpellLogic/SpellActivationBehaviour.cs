@@ -14,6 +14,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
     public GameObject spellTwo;
     public GameObject spellThree;
     public GameObject spellFour;
+    public GameObject spellFive;
 
     ////indicator objects, displays on the ground
     //[Header("Indicators")]
@@ -162,31 +163,42 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Instantiate(spellClone, mouseTarget.mouseTargetPos, Quaternion.identity);
     }
 
+    //use spell five - gravity well draw in
+    void UseSpellFive()
+    {
+        //get the location of target
+        mouseTarget.GetWorldMousePos();
+        //create spell and fire it
+        GameObject spellClone = spellFive;
+        //spawn into the world
+        Instantiate(spellClone, mouseTarget.mouseTargetPos, Quaternion.identity);
+    }
+
     //when pressing keyboard keys, use spell
     void UseSpell()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            FireBasicShot();
+            UseSpellOne();
         }
         else if (Input.GetKeyDown(KeyCode.W))
         {
             //PrepareSpellOne();
-            UseSpellOne();
+            UseSpellTwo();
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
             //PrepareSpellTwo();
-            UseSpellTwo();
+            UseSpellThree();
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
             //PrepareSpellThree();
-            UseSpellThree();
+            UseSpellFour();
         }
         else if (Input.GetKeyDown(KeyCode.T))
         {
-            UseSpellFour();
+            UseSpellFive();
         }
     }
 

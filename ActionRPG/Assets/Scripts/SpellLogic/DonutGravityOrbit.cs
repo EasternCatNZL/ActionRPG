@@ -27,15 +27,15 @@ public class DonutGravityOrbit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //if (Time.time > startTime + spellLifetime)
-        //      {
-        //          Finished();
-        //      }
-        //      else if (Time.time > lastTickTime + tickTime)
-        //      {
-        //          SpellSequence();
-        //      }
+        if (Time.time > startTime + spellLifetime)
+        {
+            Finished();
+        }
+        else if (Time.time > lastTickTime + tickTime)
+        {
             SpellSequence();
+        }
+        //SpellSequence();
 	}
 
     //get all enemies in the aoe, and then remove all within inner circle
@@ -81,6 +81,7 @@ public class DonutGravityOrbit : MonoBehaviour {
     {
         GetAllInArea();
         ApplySpell();
+        lastTickTime = Time.time;
     }
 
     //if done, destroy self
