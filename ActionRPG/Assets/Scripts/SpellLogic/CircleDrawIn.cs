@@ -10,8 +10,8 @@ public class CircleDrawIn : MonoBehaviour {
 
     [Header("Spell vars")]
     public float effectRadius = 4.0f;
-    public float pullForce = 3.0f;
-    public float upwardPull = 10.0f;
+    public float pullForce = 1.2f;
+    public float upwardPull = 1.0f;
 
 	// Use this for initialization
 	void Start () {

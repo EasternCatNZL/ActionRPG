@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67653368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.18, y: 1, z: 1.56}
+  m_LocalPosition: {x: -0.8, y: 1, z: 1.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -397,6 +397,55 @@ MonoBehaviour:
   myMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!1 &400689459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 400689461}
+  - component: {fileID: 400689460}
+  m_Layer: 0
+  m_Name: DonutSpell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &400689460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400689459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a05a720cc608046a9a760243d2c1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInSphere: []
+  enemies: []
+  outerRadius: 5
+  innerRadius: 3
+  spellLifetime: 4
+  damageValue: 0.2
+  slowAmount: 0.8
+  tickTime: 0.3
+  slowTime: 0.5
+--- !u!4 &400689461
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400689459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.51, y: 0, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &413942973
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +603,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 893617768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 3.42}
+  m_LocalPosition: {x: -4.09, y: 1, z: 1.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -670,14 +719,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabae49ef23882240853df3c49df6393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicBullet: {fileID: 1619636571686400, guid: 0f243e14a9395624c852e5f4fec9fc40,
+  basicBullet: {fileID: 1619636571686400, guid: 2077b55e4a0357e4ea174c931b8b8eca,
     type: 2}
-  biggerBullet: {fileID: 1151493666690624, guid: d632d03fdc39ad745b16586a3d5315c5,
+  biggerBullet: {fileID: 1151493666690624, guid: 9ec7cad6d8f4ef14cb3b4a58ec08cf95,
     type: 2}
-  spellTwo: {fileID: 1036824766867770, guid: 04d58109d1453964f8f3145afa31da26, type: 2}
-  spellThree: {fileID: 1878716221031060, guid: 120ec90938653604aaf8683aefd4572b, type: 2}
-  spellFour: {fileID: 1783060964329678, guid: 818382a8e59f4084cb000f6ff6de3764, type: 2}
-  lineIndicator: {fileID: 1680484551350064, guid: 5ef1a9f85797d1842b69087cd57800d1,
-    type: 2}
-  circleIndicator: {fileID: 1898195190748204, guid: e7a04e3d8dfbc1d41baf4b2af69d24a5,
-    type: 2}
+  spellTwo: {fileID: 1036824766867770, guid: 152d1e3fbfaec2349a310b650e50d6c7, type: 2}
+  spellThree: {fileID: 1878716221031060, guid: c8e8f2ad14591f54bafbb6c120c576a5, type: 2}
+  spellFour: {fileID: 1783060964329678, guid: 9cf227d725b5fef47a989e8239415a11, type: 2}

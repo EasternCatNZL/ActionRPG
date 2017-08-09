@@ -48,12 +48,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1783060964329678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8b5135c12b8b1b45aae8a7dddafcedd, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b9d4d25653115849bcfeee5bf542837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   effectRadius: 4
-  raiseForce: 0.03
-  dropForce: 2
-  spellLifetime: 3
-  disableTime: 3
-  dropTime: 2
+  raiseForce: 2
+  dropForce: 5
+  spellLifetime: 2
+  disableTime: 2
+  damageValue: 2
+  raiseEndTime: 0.5
+  dropTime: 1.5

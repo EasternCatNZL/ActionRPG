@@ -15,10 +15,10 @@ public class SpellActivationBehaviour : MonoBehaviour {
     public GameObject spellThree;
     public GameObject spellFour;
 
-    //indicator objects, displays on the ground
-    [Header("Indicators")]
-    public GameObject lineIndicator; //for line shots
-    public GameObject circleIndicator; //for circle target shots
+    ////indicator objects, displays on the ground
+    //[Header("Indicators")]
+    //public GameObject lineIndicator; //for line shots
+    //public GameObject circleIndicator; //for circle target shots
 
     //control bools
     private bool isReadyingSpell; //checks if currently preparing spell
