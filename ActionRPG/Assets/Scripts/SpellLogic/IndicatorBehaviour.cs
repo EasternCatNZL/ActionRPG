@@ -31,11 +31,11 @@ public class IndicatorBehaviour : MonoBehaviour {
     void AlignIndicator()
     {
         //get position of mouse
-        mouseTarget.GetWorldMousePos();
+        //mouseTarget.GetWorldMousePos();
         //set indicator to position of mouse
-        transform.position = mouseTarget.mouseTargetPos;
+        transform.position = MouseTarget.GetWorldMousePos();
         //align rotation using direction from player
-        Vector3 directionToFire = mouseTarget.mouseTargetPos - player.transform.position;
+        Vector3 directionToFire = MouseTarget.GetWorldMousePos() - player.transform.position;
         Quaternion rotationDirection = new Quaternion();
         rotationDirection = Quaternion.LookRotation(directionToFire);
         rotationDirection.x = 0.0f;
