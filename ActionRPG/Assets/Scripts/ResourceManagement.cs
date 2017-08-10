@@ -45,4 +45,23 @@ public class ResourceManagement : MonoBehaviour {
         return CurrentMana;
     }
 
+    public void DamageHealth(float _Amount)
+    {
+        CurrentHealth -= _Amount;
+        if(GetComponent<DropTableManager>())
+        {
+            GetComponent<DropTableManager>();
+        }
+    }
+
+    public void HealHealth(float _Amount)
+    {
+        CurrentHealth += _Amount;
+    }
+
+    public void DamageMana(float _Amount)
+    {
+        CurrentMana -= _Amount;
+    }
+
 }

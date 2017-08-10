@@ -57,10 +57,16 @@ public class PlayerMovement : MonoBehaviour
                 transform.Rotate(0.0f, Vector3.Angle(transform.forward, Direction) * TurnRate, 0.0f);
             }
             //Move the player forward
-            
-            if (Mathf.Abs(Vector3.Distance(transform.position, hit.point)) > 0.7f)
+            if (!Input.GetKey(KeyCode.LeftShift))
             {
-                Rigid.MovePosition(transform.position + transform.forward * CurrentSpeed * Time.deltaTime);
+                if (Mathf.Abs(Vector3.Distance(transform.position, hit.point)) > 0.7f)
+                {
+                    Rigid.MovePosition(transform.position + transform.forward * CurrentSpeed * Time.deltaTime);
+                }
+            }
+            else
+            {
+                MovePosition = transform.position;
             }
 
         }
