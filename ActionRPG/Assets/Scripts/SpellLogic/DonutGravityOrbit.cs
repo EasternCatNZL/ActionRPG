@@ -12,6 +12,7 @@ public class DonutGravityOrbit : MonoBehaviour {
     public float outerRadius = 5.0f; //length of radius
     public float innerRadius = 3.0f; //length of inner circle radius
     public float spellLifetime = 4.0f; //lifetime of the spell
+    public float resourceCost = 2.0f; //cost of using this spell
     public float damageValue = 0.2f; //amount of damage spell does each tick <- multiply with stats
     public float slowAmount = 0.8f; //% amount enemy move speed is decreased by, incremented each tick
     public float tickTime = 0.3f; //time between each tick of spell application
@@ -90,13 +91,13 @@ public class DonutGravityOrbit : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    //private void OnDrawGizmos()
-    //{
-    //    //gizmo debug of outer sphere
-    //    Gizmos.color = Color.yellow;
-    //    Gizmos.DrawSphere(transform.position, outerRadius);
-    //    //gizmo debug of inner sphere
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawSphere(transform.position, innerRadius);
-    //}
+    private void OnDrawGizmos()
+    {
+        //gizmo debug of outer sphere
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, outerRadius);
+        //gizmo debug of inner sphere
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position, innerRadius);
+    }
 }
