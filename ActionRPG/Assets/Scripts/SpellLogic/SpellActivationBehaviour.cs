@@ -21,12 +21,15 @@ public class SpellActivationBehaviour : MonoBehaviour {
     //public GameObject lineIndicator; //for line shots
     //public GameObject circleIndicator; //for circle target shots
 
-    //control bools
-    private bool isReadyingSpell; //checks if currently preparing spell
-    //checks if spell is currently being prepared
-    private bool spellOnePreparing; 
-    private bool spellTwoPreparing;
-    private bool spellThreePreparing;
+    //have learnt spells
+    [HideInInspector]
+    public bool SpellOneLearned = false;
+    [HideInInspector]
+    public bool SpellTwoLearned = false;
+    [HideInInspector]
+    public bool SpellThreeLearned = false;
+    [HideInInspector]
+    public bool SpellFourLearned = false;
 
     // Use this for initialization
     void Start () {
