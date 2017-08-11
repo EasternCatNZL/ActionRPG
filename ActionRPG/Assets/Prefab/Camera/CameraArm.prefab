@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1146831801285420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4824252698024750}
@@ -131,16 +131,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1192717381837996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e140dc1a06b52429d042e79274d174, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a9a37fbe0f6b0b41a1480a60a2771bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TrackingTarget: {fileID: 0}
-  ZoomAmount: 10
+  ZoomAmount: 5
   ZoomIntervals: 1
-  ZoomMin: 2
+  ZoomMin: 0
   ZoomMax: 10
-  CameraAngle: 45
-  ZoomAngleRatio: 5
+  CameraAngle: 25
+  ZoomAngleRatio: 25
 --- !u!124 &124563634580471160
 Behaviour:
   m_ObjectHideFlags: 1
