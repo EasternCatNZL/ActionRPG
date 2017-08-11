@@ -23,6 +23,9 @@ public class PlayerSkillTreeManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         spellBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<SpellActivationBehaviour>();
+        buttonTwo.interactable = false;
+        buttonThree.interactable = false;
+        buttonFour.interactable = false;
 	}
 	
 	// Update is called once per frame
@@ -35,18 +38,21 @@ public class PlayerSkillTreeManager : MonoBehaviour {
     {
         spellBehaviour.SpellOneLearned = true;
         buttonOne.interactable = false;
+        buttonTwo.interactable = true;
     }
 
     public void LearnSpellTwo()
     {
         spellBehaviour.SpellTwoLearned = true;
         buttonTwo.interactable = false;
+        buttonThree.interactable = true;
     }
 
     public void LearnSpellThree()
     {
         spellBehaviour.SpellThreeLearned = true;
         buttonThree.interactable = false;
+        buttonFour.interactable = true;
     }
 
     public void LearnSpellFour()

@@ -11,7 +11,7 @@ public class CirclePushOut : MonoBehaviour {
     [Header("Spell vars")]
     public float effectRadius = 4.0f;
     public float pushForce = 1.2f;
-    public float upwardPull = 1.0f;
+    public float upwardPull = 0.5f;
 
     // Use this for initialization
     void Start () {
