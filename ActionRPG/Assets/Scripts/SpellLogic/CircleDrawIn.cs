@@ -10,6 +10,7 @@ public class CircleDrawIn : MonoBehaviour {
 
     [Header("Spell vars")]
     public float effectRadius = 4.0f;
+    public float damageValue = 2.0f;
     public float pullForce = 1.2f;
     public float upwardPull = 0.5f;
 
@@ -50,6 +51,8 @@ public class CircleDrawIn : MonoBehaviour {
             Vector3 directionToPull = slightlyUp - enemies[i].transform.position;
             //apply a force to the body
             enemies[i].GetComponent<Rigidbody>().AddForce(directionToPull * pullForce, ForceMode.Impulse);
+            //apply damage
+            enemies[i].GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
         }
     }
 

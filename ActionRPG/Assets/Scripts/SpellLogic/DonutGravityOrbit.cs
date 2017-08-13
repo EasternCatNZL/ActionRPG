@@ -70,9 +70,15 @@ public class DonutGravityOrbit : MonoBehaviour {
     //apply effects of spell
     private void ApplySpell()
     {
-        //renew the slow timer
-        //apply damage
-        //apply slow
+        //for each enemy
+        for (int i = 0; i < enemies.Count; i++)
+        {
+            //renew the slow timer
+            //apply damage
+            enemies[i].GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
+            //apply slow
+        }
+
         //clear list once done
         enemies.Clear();
     }

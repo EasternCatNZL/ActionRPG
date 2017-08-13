@@ -10,6 +10,7 @@ public class CirclePushOut : MonoBehaviour {
 
     [Header("Spell vars")]
     public float effectRadius = 4.0f;
+    public float damageValue = 3.0f;
     public float pushForce = 1.2f;
     public float upwardPull = 0.5f;
 
@@ -50,6 +51,8 @@ public class CirclePushOut : MonoBehaviour {
             Vector3 directionToPush = slightlyUp - transform.position;
             //apply a force to the body
             enemies[i].GetComponent<Rigidbody>().AddForce(directionToPush * pushForce, ForceMode.Impulse);
+            //apply damage
+            enemies[i].GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
         }
     }
 

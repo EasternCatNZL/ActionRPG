@@ -109,14 +109,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabae49ef23882240853df3c49df6393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicBullet: {fileID: 1619636571686400, guid: bcb799d35de2d20498693d2448f33458,
+  basicBullet: {fileID: 1619636571686400, guid: 0f243e14a9395624c852e5f4fec9fc40,
     type: 2}
-  biggerBullet: {fileID: 1151493666690624, guid: 94b5f16599efbb14782138d389a43845,
+  biggerBullet: {fileID: 1151493666690624, guid: d632d03fdc39ad745b16586a3d5315c5,
     type: 2}
-  spellTwo: {fileID: 1036824766867770, guid: 734aa7fc07a5494419c01849f24043aa, type: 2}
-  spellThree: {fileID: 1878716221031060, guid: 26f8e01f7d73b6647a294e377bcd9f9d, type: 2}
-  spellFour: {fileID: 1783060964329678, guid: 2debd80172b86904ca79a00b45ef9bc8, type: 2}
-  spellFive: {fileID: 1803993830628012, guid: 463fc4c11fafb0c458eec4bd69ac92bf, type: 2}
+  Shockwave: {fileID: 1036824766867770, guid: faee6d6b5efe5ae459da8af005d4d53f, type: 2}
+  PushOut: {fileID: 1878716221031060, guid: fd838601e920e2941975883ca2c34138, type: 2}
+  GravityLift: {fileID: 1783060964329678, guid: 818382a8e59f4084cb000f6ff6de3764,
+    type: 2}
+  GravityHole: {fileID: 1803993830628012, guid: 566570b67ba74ff49b27c1c10e86534a,
+    type: 2}
   SpellOneLearned: 0
   SpellTwoLearned: 0
   SpellThreeLearned: 0

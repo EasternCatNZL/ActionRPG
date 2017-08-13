@@ -105,7 +105,7 @@ public class GravityLiftSpell : MonoBehaviour {
             //apply upward force 
             enemies[i].GetComponent<Rigidbody>().AddForce(Vector3.down * dropForce, ForceMode.Acceleration);
             //apply damage
-
+            enemies[i].GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
         }
         //set has dropped enemies to true
         hasDropped = true;

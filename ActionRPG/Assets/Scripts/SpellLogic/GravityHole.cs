@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class GravityHole : MonoBehaviour {
 
@@ -15,6 +16,7 @@ public class GravityHole : MonoBehaviour {
     public float disableTime = 3.0f; //sent to enemy, disables for this time
     public float damageValue = 2.0f; //set damage value <- multiply with stats?
     public float tickTime = 0.3f; //time between each tick of spell application
+    public float enemyHalfHeight = 0.5f; //height alteration of enemies to have level force pull
 
     private float startTime = 0.0f; //time this spell started, for timing
     private float lastTickTime = 0.0f; //time of last tick
@@ -60,10 +62,14 @@ public class GravityHole : MonoBehaviour {
         {
             //remove the forces on body at start of tick
             enemies[i].GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //get altered height for centre
+            Vector3 centreAltered = new Vector3(transform.position.x, transform.position.y + enemyHalfHeight, transform.position.z);
             //get direction to centre of spell
-            Vector3 toCentre = transform.position - enemies[i].transform.position;
+            Vector3 toCentre = centreAltered - enemies[i].transform.position;
             //apply force to the body
             enemies[i].GetComponent<Rigidbody>().AddForce(toCentre * pullForce, ForceMode.Impulse);
+            //apply damage
+            enemies[i].GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
         }
     }
 
