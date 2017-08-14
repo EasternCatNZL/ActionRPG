@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 6f0d419eac75ee2449dad2e2d1a80b5d
+timeCreated: 1502741547
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Main_Character_Rig:Back_1
+    100002: Main_Character_Rig:Back_2
+    100004: Main_Character_Rig:Back_3
+    100006: Main_Character_Rig:Back_4
+    100008: Main_Character_Rig:Back_5
+    100010: Main_Character_Rig:Back_6
+    100012: Main_Character_Rig:Back_7
+    100014: Main_Character_Rig:Back_8
+    100016: Main_Character_Rig:Back_Curve
+    100018: Main_Character_Rig:Back_IK
+    100020: Main_Character_Rig:DNT
+    100022: Main_Character_Rig:Head_Joint
+    100024: Main_Character_Rig:Left_Ankle
+    100026: Main_Character_Rig:Left_Ball
+    100028: Main_Character_Rig:Left_Clavical
+    100030: Main_Character_Rig:Left_Elbow
+    100032: Main_Character_Rig:Left_Finger_1
+    100034: Main_Character_Rig:Left_Finger_1 1
+    100036: Main_Character_Rig:Left_Forearm
+    100038: Main_Character_Rig:Left_Hip
+    100040: Main_Character_Rig:Left_Knee
+    100042: Main_Character_Rig:Left_Shoulder
+    100044: Main_Character_Rig:Left_Thumb_1
+    100046: Main_Character_Rig:Left_Thumb_2
+    100048: Main_Character_Rig:Left_Toe_Tip
+    100050: Main_Character_Rig:Left_Wrist
+    100052: Main_Character_Rig:Main_Dude
+    100054: Main_Character_Rig:Main_Dude_Collar
+    100056: Main_Character_Rig:Main_Dude_Gun
+    100058: Main_Character_Rig:Main_Dude_Hat
+    100060: Main_Character_Rig:Main_Dude_Left_ShoulderPAd
+    100062: Main_Character_Rig:Main_Dude_Right_ShoulderPAd
+    100064: Main_Character_Rig:Right_Ankle
+    100066: Main_Character_Rig:Right_Ball
+    100068: Main_Character_Rig:Right_Clavical
+    100070: Main_Character_Rig:Right_Elbow
+    100072: Main_Character_Rig:Right_Hip
+    100074: Main_Character_Rig:Right_Knee
+    100076: Main_Character_Rig:Right_Shoulder
+    100078: Main_Character_Rig:Right_Toe_Tip
+    100080: Main_Character_Rig:Right_Wrist
+    100082: Main_Character_Rig:Root
+    100084: Main_Character_Rig:Skeleton_Group
+    100086: //RootNode
+    400000: Main_Character_Rig:Back_1
+    400002: Main_Character_Rig:Back_2
+    400004: Main_Character_Rig:Back_3
+    400006: Main_Character_Rig:Back_4
+    400008: Main_Character_Rig:Back_5
+    400010: Main_Character_Rig:Back_6
+    400012: Main_Character_Rig:Back_7
+    400014: Main_Character_Rig:Back_8
+    400016: Main_Character_Rig:Back_Curve
+    400018: Main_Character_Rig:Back_IK
+    400020: Main_Character_Rig:DNT
+    400022: Main_Character_Rig:Head_Joint
+    400024: Main_Character_Rig:Left_Ankle
+    400026: Main_Character_Rig:Left_Ball
+    400028: Main_Character_Rig:Left_Clavical
+    400030: Main_Character_Rig:Left_Elbow
+    400032: Main_Character_Rig:Left_Finger_1
+    400034: Main_Character_Rig:Left_Finger_1 1
+    400036: Main_Character_Rig:Left_Forearm
+    400038: Main_Character_Rig:Left_Hip
+    400040: Main_Character_Rig:Left_Knee
+    400042: Main_Character_Rig:Left_Shoulder
+    400044: Main_Character_Rig:Left_Thumb_1
+    400046: Main_Character_Rig:Left_Thumb_2
+    400048: Main_Character_Rig:Left_Toe_Tip
+    400050: Main_Character_Rig:Left_Wrist
+    400052: Main_Character_Rig:Main_Dude
+    400054: Main_Character_Rig:Main_Dude_Collar
+    400056: Main_Character_Rig:Main_Dude_Gun
+    400058: Main_Character_Rig:Main_Dude_Hat
+    400060: Main_Character_Rig:Main_Dude_Left_ShoulderPAd
+    400062: Main_Character_Rig:Main_Dude_Right_ShoulderPAd
+    400064: Main_Character_Rig:Right_Ankle
+    400066: Main_Character_Rig:Right_Ball
+    400068: Main_Character_Rig:Right_Clavical
+    400070: Main_Character_Rig:Right_Elbow
+    400072: Main_Character_Rig:Right_Hip
+    400074: Main_Character_Rig:Right_Knee
+    400076: Main_Character_Rig:Right_Shoulder
+    400078: Main_Character_Rig:Right_Toe_Tip
+    400080: Main_Character_Rig:Right_Wrist
+    400082: Main_Character_Rig:Root
+    400084: Main_Character_Rig:Skeleton_Group
+    400086: //RootNode
+    4300000: Main_Character_Rig:Main_Dude_Right_ShoulderPAd
+    4300002: Main_Character_Rig:Main_Dude
+    4300004: Main_Character_Rig:Main_Dude_Gun
+    4300006: Main_Character_Rig:Main_Dude_Collar
+    4300008: Main_Character_Rig:Main_Dude_Hat
+    4300010: Main_Character_Rig:Main_Dude_Left_ShoulderPAd
+    7400000: GravityIdle
+    9500000: //RootNode
+    13700000: Main_Character_Rig:Main_Dude
+    13700002: Main_Character_Rig:Main_Dude_Collar
+    13700004: Main_Character_Rig:Main_Dude_Gun
+    13700006: Main_Character_Rig:Main_Dude_Hat
+    13700008: Main_Character_Rig:Main_Dude_Left_ShoulderPAd
+    13700010: Main_Character_Rig:Main_Dude_Right_ShoulderPAd
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GravityIdle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
