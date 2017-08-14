@@ -82,6 +82,11 @@ public class ResourceManagement : MonoBehaviour {
         CurrentHealth += _Amount;
     }
 
+    public void HealMana(float _Amount)
+    {
+        CurrentMana += _Amount;
+    }
+
     public void DamageMana(float _Amount)
     {
         CurrentMana -= _Amount;

@@ -16,6 +16,8 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     [Header("Drops")]
     public GameObject healthDrop; //health pickup
     public GameObject manaDrop; //mana pickup
+    public float healthDropAmount; //health value on health drop
+    public float manaDropAmount; //mana value on mana drop
 
 	// Use this for initialization
 	void Start () {
@@ -54,12 +56,24 @@ public class EnemyResourceBehaviour : MonoBehaviour {
         if (healthDrop)
         {
             GameObject healthClone = healthDrop;
-            Instantiate(healthClone, transform.position, transform.rotation);
+            //give random rotation to loot
+            Quaternion alteredRotation = new Quaternion();
+            alteredRotation.eulerAngles = new Vector3(0.0f, Random.Range(0.0f, 359.0f), 0.0f);
+            //set health restore value
+            healthClone.GetComponent<LootDropBehaviour>().healthRestore = healthDropAmount;
+            //spawn
+            Instantiate(healthClone, transform.position, alteredRotation);
         }
         if (manaDrop)
         {
             GameObject manaClone = manaDrop;
-            Instantiate(manaClone, transform.position, transform.rotation);
+            //give random rotation to loot
+            Quaternion alteredRotation = new Quaternion();
+            alteredRotation.eulerAngles = new Vector3(0.0f, Random.Range(0.0f, 359.0f), 0.0f);
+            //set mana restore value
+            manaClone.GetComponent<LootDropBehaviour>().manaRestore = manaDropAmount;
+            //spawn
+            Instantiate(manaClone, transform.position, alteredRotation);
         }
     }
 
