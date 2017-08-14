@@ -108,6 +108,67 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &38814326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1804167383004850, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 38814327}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &38814327
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4665041110170350, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38814326}
+  m_LocalRotation: {x: 1.7433653e-25, y: -7.406369e-17, z: 0.12837209, w: 0.9917261}
+  m_LocalPosition: {x: -0.07208961, y: -1.3322676e-17, z: -8.801205e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1380485121}
+  m_Father: {fileID: 2020104320}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &49416942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1122570077322968, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 49416943}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_IK
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &49416943
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4839146678098566, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 49416942}
+  m_LocalRotation: {x: 0.008416149, y: 0.7070567, z: 0.008416149, w: 0.7070567}
+  m_LocalPosition: {x: -1.2803659e-16, y: 0.2084605, z: -0.26388863}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 686705461}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &94403638
 Prefab:
   m_ObjectHideFlags: 0
@@ -159,9 +220,124 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bf6d7e3284f6a2f469a4eda34f5d51a6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf6d7e3284f6a2f469a4eda34f5d51a6, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &94403639 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: bf6d7e3284f6a2f469a4eda34f5d51a6, type: 3}
+  m_PrefabInternal: {fileID: 94403638}
+--- !u!64 &94403640
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94403639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: bf6d7e3284f6a2f469a4eda34f5d51a6, type: 3}
+--- !u!1 &107295220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1723572809314632, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 107295221}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &107295221
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4039478437240044, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107295220}
+  m_LocalRotation: {x: 0, y: 0, z: 0.12466412, w: 0.992199}
+  m_LocalPosition: {x: -0.08041124, y: -7.105427e-17, z: -3.5709764e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 111579301}
+  m_Father: {fileID: 1553911108}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &111579300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1836544890187020, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 111579301}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &111579301
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4574003805380086, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 111579300}
+  m_LocalRotation: {x: -9.2411505e-26, y: -3.984977e-17, z: 0.12218326, w: 0.9925076}
+  m_LocalPosition: {x: -0.0750109, y: -3.5527136e-17, z: -3.0902684e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 280494652}
+  m_Father: {fileID: 107295221}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &216421803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1078873262747480, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 216421804}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Body_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &216421804
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4698119032457840, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 216421803}
+  m_LocalRotation: {x: -0.10956614, y: 0.9939795, z: -5.41547e-17, w: 6.757268e-17}
+  m_LocalPosition: {x: 0.051987298, y: 0.0070434897, z: 2.6410431e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 976871352}
+  m_Father: {fileID: 1553911108}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &233232958
 Prefab:
   m_ObjectHideFlags: 0
@@ -171,7 +347,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: a0f1e27b47adf0741ab9dc709a97eddf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.47
+      value: -7.18
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0f1e27b47adf0741ab9dc709a97eddf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -179,7 +355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0f1e27b47adf0741ab9dc709a97eddf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.76
+      value: -18.81
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0f1e27b47adf0741ab9dc709a97eddf, type: 3}
       propertyPath: m_LocalRotation.x
@@ -236,6 +412,67 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0f1e27b47adf0741ab9dc709a97eddf, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &280494651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1561467226420656, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 280494652}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &280494652
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4812701149491146, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 280494651}
+  m_LocalRotation: {x: 4.9823614e-26, y: -3.754191e-17, z: -0.013635584, w: 0.9999071}
+  m_LocalPosition: {x: -0.036385633, y: 1.1851631e-16, z: -2.8781909e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2020104320}
+  m_Father: {fileID: 111579301}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &319712676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1062797955728326, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 319712677}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Left_Claw_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &319712677
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4479284890041186, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 319712676}
+  m_LocalRotation: {x: 0.28594163, y: 0.6467128, z: -0.28594163, w: 0.6467128}
+  m_LocalPosition: {x: -0.108309, y: -3.5527136e-17, z: -1.7763568e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 602288985}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &338998406
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +552,962 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &374958608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1659743619451988, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 374958609}
+  - component: {fileID: 374958610}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Shrimpy_Monster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &374958609
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4611286405246570, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374958608}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1383145117}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &374958610
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 137862061796142104, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374958608}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: bf4e336b4aeeb4f47a491b6b1ca8c047, type: 3}
+  m_Bones:
+  - {fileID: 1553911108}
+  - {fileID: 107295221}
+  - {fileID: 111579301}
+  - {fileID: 280494652}
+  - {fileID: 2020104320}
+  - {fileID: 38814327}
+  - {fileID: 1380485121}
+  - {fileID: 1112890805}
+  - {fileID: 1254490268}
+  - {fileID: 969748664}
+  - {fileID: 1426632895}
+  - {fileID: 1013358505}
+  - {fileID: 1124474843}
+  - {fileID: 1735486236}
+  - {fileID: 216421804}
+  - {fileID: 976871352}
+  - {fileID: 1977184776}
+  - {fileID: 982832261}
+  - {fileID: 1859941006}
+  - {fileID: 1388076170}
+  - {fileID: 1080170822}
+  - {fileID: 1376554160}
+  - {fileID: 848274456}
+  - {fileID: 782460340}
+  - {fileID: 602288985}
+  - {fileID: 319712677}
+  - {fileID: 1788372336}
+  - {fileID: 1818693494}
+  - {fileID: 1910087852}
+  - {fileID: 1578946574}
+  - {fileID: 1821204105}
+  - {fileID: 1014250216}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1553911108}
+  m_AABB:
+    m_Center: {x: 0.07045263, y: -0.05948724, z: -0.004759811}
+    m_Extent: {x: 0.4864592, y: 0.34902215, z: 0.13184753}
+  m_DirtyAABB: 0
+--- !u!1 &431884085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1192717381837996, guid: 6f56e7cd796f3ec4090deea102649288,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 431884087}
+  - component: {fileID: 431884086}
+  m_Layer: 0
+  m_Name: CameraArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &431884086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114596755342871674, guid: 6f56e7cd796f3ec4090deea102649288,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431884085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13ab7c5e97b5074493e2c6e8b4d4104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackingTarget: {fileID: 1383145117}
+  HeightOffset: 0.5
+  ZoomIntervals: 1
+  ZoomMin: 1
+  ZoomMax: 8
+  CameraMin: 25
+  CameraMax: 55
+--- !u!4 &431884087
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4824252698024750, guid: 6f56e7cd796f3ec4090deea102649288,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431884085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1561376732}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &602288984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1916953902534504, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 602288985}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Left_Claw_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &602288985
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4795422739556612, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 602288984}
+  m_LocalRotation: {x: 1.5905493e-24, y: -8.2588684e-17, z: -0.35034153, w: 0.936622}
+  m_LocalPosition: {x: -0.13496399, y: 7.105427e-17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 319712677}
+  m_Father: {fileID: 782460340}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &673988221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1389958918921740, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 673988222}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:imagePlane1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673988222
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4930216926038274, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 673988221}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.036379192, y: 0.030144012, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1383145117}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &686705460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1439923762735278, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 686705461}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:DNT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &686705461
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4128764272155540, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686705460}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 978945004}
+  - {fileID: 1934591018}
+  - {fileID: 773546513}
+  - {fileID: 49416943}
+  m_Father: {fileID: 1383145117}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &773546512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1707135575461774, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 773546513}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_Curve
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773546513
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4522743158869832, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773546512}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 686705461}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &782460339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1588255554913130, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 782460340}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Left_Wrist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782460340
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4605280849934696, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 782460339}
+  m_LocalRotation: {x: 0.70948714, y: 0.7047185, z: -1.2498723e-17, w: 9.87198e-17}
+  m_LocalPosition: {x: -0.20730203, y: 0, z: -3.5527136e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 602288985}
+  m_Father: {fileID: 848274456}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &848274455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1100385453855040, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 848274456}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Left_Elbow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &848274456
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4954040891227444, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848274455}
+  m_LocalRotation: {x: 0.6819478, y: 0.73140085, z: -3.028124e-18, w: -8.6542647e-17}
+  m_LocalPosition: {x: -0.18281041, y: 1.7763568e-17, z: -1.7763568e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 782460340}
+  m_Father: {fileID: 1376554160}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &969748663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1413318304791516, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 969748664}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969748664
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4179598542600316, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969748663}
+  m_LocalRotation: {x: 2.491121e-25, y: 6.868898e-17, z: -0.27364427, w: 0.961831}
+  m_LocalPosition: {x: -0.044767816, y: 1.1990408e-16, z: 7.0316e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1426632895}
+  m_Father: {fileID: 1254490268}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &976871351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1869219731282164, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 976871352}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Body_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &976871352
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4934862217152852, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976871351}
+  m_LocalRotation: {x: 1.3983314e-25, y: 5.4527958e-17, z: -0.075953424, w: 0.9971114}
+  m_LocalPosition: {x: -0.052122477, y: -1.7763568e-17, z: -2.5451368e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1977184776}
+  m_Father: {fileID: 216421804}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &978945003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1006174140052492, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 978945004}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Front_Body_Curve
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &978945004
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4368969662413870, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978945003}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 686705461}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &982832260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1301683027998242, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 982832261}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Neck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &982832261
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4913860535826124, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 982832260}
+  m_LocalRotation: {x: 1.31273e-23, y: 1.1057969e-15, z: -0.17377672, w: 0.9847851}
+  m_LocalPosition: {x: -0.09182907, y: -8.881784e-18, z: 8.491705e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1859941006}
+  m_Father: {fileID: 1977184776}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1013358504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1029441274231058, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1013358505}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1013358505
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4285039935671476, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013358504}
+  m_LocalRotation: {x: 1.1753656e-25, y: 2.803709e-17, z: -0.22168724, w: 0.97511786}
+  m_LocalPosition: {x: -0.05901347, y: -8.881784e-18, z: 6.667025e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1124474843}
+  m_Father: {fileID: 1426632895}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1014250215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1069269681086576, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1014250216}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Right_Claw_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1014250216
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4689689595711388, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1014250215}
+  m_LocalRotation: {x: 0.28594163, y: 0.6467128, z: -0.28594163, w: 0.6467128}
+  m_LocalPosition: {x: 0.10830866, y: 0.00000036094565, z: -2.4868995e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1821204105}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1080170821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1233838972500006, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1080170822}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Left_Clavical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080170822
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4057020685147070, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080170821}
+  m_LocalRotation: {x: 0.04904757, y: -0.7054037, z: 0.04904757, w: 0.7054037}
+  m_LocalPosition: {x: -0.012283523, y: -0.00754602, z: -0.038778905}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1376554160}
+  m_Father: {fileID: 1977184776}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1112890804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1260715001855622, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1112890805}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1112890805
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4246293472937140, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112890804}
+  m_LocalRotation: {x: 0.95757616, y: 0.2881804, z: 8.914497e-17, w: 3.711716e-17}
+  m_LocalPosition: {x: -0.08169719, y: -6.217249e-17, z: -1.3497201e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1254490268}
+  m_Father: {fileID: 1380485121}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1124474842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1446392277300612, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1124474843}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124474843
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4564630870261982, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124474842}
+  m_LocalRotation: {x: -1.0638668e-27, y: -3.6215754e-18, z: -0.19901934, w: 0.97999555}
+  m_LocalPosition: {x: -0.040171497, y: 5.412337e-18, z: 2.1965345e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1735486236}
+  m_Father: {fileID: 1013358505}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1254490267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1129005044457624, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1254490268}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1254490268
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4659139183245826, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254490267}
+  m_LocalRotation: {x: 5.055268e-25, y: 7.9632995e-17, z: -0.16555592, w: 0.9862004}
+  m_LocalPosition: {x: -0.05929169, y: 5.412337e-17, z: 8.854224e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 969748664}
+  m_Father: {fileID: 1112890805}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1351986476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1351986481}
+  - component: {fileID: 1351986480}
+  - component: {fileID: 1351986478}
+  - component: {fileID: 1351986477}
+  m_Layer: 0
+  m_Name: MousePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1351986477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351986476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cb1381026f59e42af146d3cf9fc8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackFloorOnly: 1
+--- !u!23 &1351986478
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351986476}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f5f5d29f4e2bafb49b84ba6cb628f42f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1351986480
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351986476}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1351986481
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351986476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.551194, y: -0.014261007, z: 16.43385}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376554159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1790576705166170, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1376554160}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Left_Shoulder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1376554160
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4111560307983350, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1376554159}
+  m_LocalRotation: {x: -0.47464427, y: -0.5241305, z: 0.47464427, w: 0.5241305}
+  m_LocalPosition: {x: -0.051899306, y: -0.010932114, z: 0.02617589}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 848274456}
+  m_Father: {fileID: 1080170822}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1380485120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1375850651357026, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1380485121}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380485121
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4385879909246992, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1380485120}
+  m_LocalRotation: {x: 1.3348416e-25, y: -8.3994705e-17, z: 0.18114972, w: 0.98345554}
+  m_LocalPosition: {x: -0.069038205, y: -5.7731595e-17, z: -1.01418365e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1112890805}
+  m_Father: {fileID: 38814327}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1383145116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1046555075954666, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1383145117}
+  - component: {fileID: 1383145121}
+  - component: {fileID: 1383145120}
+  - component: {fileID: 1383145119}
+  - component: {fileID: 1383145118}
+  m_Layer: 0
+  m_Name: ShrimpyPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1383145117
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4832004478821330, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383145116}
+  m_LocalRotation: {x: -0, y: 0.703064, z: -0, w: 0.7111266}
+  m_LocalPosition: {x: -15.222597, y: -6.5540405e-17, z: 16.795168}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 686705461}
+  - {fileID: 673988222}
+  - {fileID: 374958609}
+  - {fileID: 1659491742}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 89.34701, z: 0}
+--- !u!54 &1383145118
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383145116}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1383145119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383145116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b61710e9a199cf4b969c5cc3c149bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  TurnRate: 1
+--- !u!136 &1383145120
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383145116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 0.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.51, z: 0}
+--- !u!95 &1383145121
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 95295464055134490, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383145116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: bf4e336b4aeeb4f47a491b6b1ca8c047, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4455ede20763ccd43a546f082a7d4ae5, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1388076169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1912645444778920, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1388076170}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Head_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1388076170
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4263833911331446, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388076169}
+  m_LocalRotation: {x: -0.29759336, y: 0.9546928, z: -7.668041e-17, w: -4.0235736e-17}
+  m_LocalPosition: {x: -0.061568484, y: 3.1467016e-17, z: 6.2364786e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1859941006}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1426632894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1134160381615916, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1426632895}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426632895
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4078576196665156, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1426632894}
+  m_LocalRotation: {x: 2.0059023e-26, y: 5.6761815e-17, z: -0.09822722, w: 0.99516404}
+  m_LocalPosition: {x: -0.063318476, y: -4.440892e-18, z: 8.366548e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1013358505}
+  m_Father: {fileID: 969748664}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1438177578
 Prefab:
   m_ObjectHideFlags: 0
@@ -369,18 +1562,69 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f0b24f2acd9e0d4888167f3a7d56120, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &1507480870
+--- !u!1 &1438177579 stripped
 GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 3f0b24f2acd9e0d4888167f3a7d56120, type: 3}
+  m_PrefabInternal: {fileID: 1438177578}
+--- !u!64 &1438177580
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1438177579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 3f0b24f2acd9e0d4888167f3a7d56120, type: 3}
+--- !u!1 &1553911107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1167364589038608, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1507480875}
-  - component: {fileID: 1507480874}
-  - component: {fileID: 1507480873}
-  - component: {fileID: 1507480872}
-  - component: {fileID: 1507480871}
+  - component: {fileID: 1553911108}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1553911108
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4818205613001398, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1553911107}
+  m_LocalRotation: {x: 0.15513071, y: -0.68988, z: -0.15513071, w: 0.68988}
+  m_LocalPosition: {x: -0, y: 0.46854505, z: 0.0019330874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 216421804}
+  - {fileID: 107295221}
+  m_Father: {fileID: 1659491742}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1561376731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1146831801285420, guid: 6f56e7cd796f3ec4090deea102649288,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1561376732}
+  - component: {fileID: 1561376736}
+  - component: {fileID: 1561376735}
+  - component: {fileID: 1561376734}
+  - component: {fileID: 1561376733}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -388,33 +1632,51 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1507480871
+--- !u!4 &1561376732
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4814703307950044, guid: 6f56e7cd796f3ec4090deea102649288,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561376731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 431884087}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1561376733
 AudioListener:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 81506242839624930, guid: 6f56e7cd796f3ec4090deea102649288,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1507480870}
+  m_GameObject: {fileID: 1561376731}
   m_Enabled: 1
---- !u!124 &1507480872
+--- !u!124 &1561376734
 Behaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 124563634580471160, guid: 6f56e7cd796f3ec4090deea102649288,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1507480870}
+  m_GameObject: {fileID: 1561376731}
   m_Enabled: 1
---- !u!92 &1507480873
+--- !u!92 &1561376735
 Behaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 92762029388581186, guid: 6f56e7cd796f3ec4090deea102649288,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1507480870}
+  m_GameObject: {fileID: 1561376731}
   m_Enabled: 1
---- !u!20 &1507480874
+--- !u!20 &1561376736
 Camera:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 20137905862771594, guid: 6f56e7cd796f3ec4090deea102649288,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1507480870}
+  m_GameObject: {fileID: 1561376731}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -445,16 +1707,344 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!4 &1507480875
+--- !u!1 &1578946573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1299519995580118, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1578946574}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Right_Wrist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1578946574
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 4381106563116834, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1507480870}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_GameObject: {fileID: 1578946573}
+  m_LocalRotation: {x: 0.7085398, y: 0.7037775, z: 0.0014920536, w: -0.051637456}
+  m_LocalPosition: {x: 0.20730151, y: -0.0000006625108, z: -9.006129e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1821204105}
+  m_Father: {fileID: 1910087852}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1659491741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1487468203824806, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1659491742}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Skeleton_Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1659491742
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4233693813164192, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659491741}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1553911108}
+  m_Father: {fileID: 1383145117}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1735486235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1906541834631012, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1735486236}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1735486236
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4403815875590112, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1735486235}
+  m_LocalRotation: {x: 0.13247018, y: -0.6945874, z: 0.13247018, w: 0.6945874}
+  m_LocalPosition: {x: -0.04936217, y: 4.4408918e-17, z: -3.5038533e-19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1124474843}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1788372335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1915520728545002, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1788372336}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Right_Clavical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1788372336
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4175015996507522, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1788372335}
+  m_LocalRotation: {x: 0.7054037, y: 0.04904753, z: 0.7054037, w: -0.04904753}
+  m_LocalPosition: {x: -0.012283611, y: -0.007545683, z: 0.0387789}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1818693494}
+  m_Father: {fileID: 1977184776}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1818693493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1470474335278872, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1818693494}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Right_Shoulder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1818693494
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4459152824433542, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1818693493}
+  m_LocalRotation: {x: 0.47208643, y: 0.5599082, z: -0.47593465, w: -0.4869532}
+  m_LocalPosition: {x: 0.0518993, y: 0.010931999, z: -0.026175998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1910087852}
+  m_Father: {fileID: 1788372336}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1821204104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1468734190848406, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1821204105}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Right_Claw_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1821204105
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4777902708740068, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1821204104}
+  m_LocalRotation: {x: 0.0000000261107, y: 0.00000001526786, z: -0.35034153, w: 0.936622}
+  m_LocalPosition: {x: 0.13496421, y: -0.00000015621107, z: -0.0000000020110866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1014250216}
+  m_Father: {fileID: 1578946574}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1859941005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1352491033640034, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1859941006}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Head_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1859941006
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4904106467793142, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859941005}
+  m_LocalRotation: {x: 0, y: 0, z: 0.1623771, w: 0.9867288}
+  m_LocalPosition: {x: -0.06520142, y: -1.7763568e-17, z: 1.4200506e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1388076170}
+  m_Father: {fileID: 982832261}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1910087851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1190226320343212, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1910087852}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Right_Elbow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1910087852
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4121325728984696, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910087851}
+  m_LocalRotation: {x: 0.6819478, y: 0.73140085, z: -3.028124e-18, w: -8.6542647e-17}
+  m_LocalPosition: {x: 0.18281135, y: 0.00000012521153, z: -4.6185276e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1578946574}
+  m_Father: {fileID: 1818693494}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1934591017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1034394776177342, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1934591018}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Front_Body_IK
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1934591018
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4051367550940116, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1934591017}
+  m_LocalRotation: {x: -0.17088404, y: 0.6861477, z: -0.17088404, w: 0.6861477}
+  m_LocalPosition: {x: -1.3030043e-17, y: 0.48085254, z: 0.3017333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 686705461}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1977184775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1895491395309290, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1977184776}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Body_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1977184776
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4866449707884070, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977184775}
+  m_LocalRotation: {x: 8.800265e-25, y: 4.649152e-16, z: -0.104601726, w: 0.9945142}
+  m_LocalPosition: {x: -0.050563477, y: 3.7747583e-17, z: 5.4983175e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1080170822}
+  - {fileID: 982832261}
+  - {fileID: 1788372336}
+  m_Father: {fileID: 976871352}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2020104319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1768106998255624, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2020104320}
+  m_Layer: 0
+  m_Name: Krill_Beast_Rigged:Tail_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2020104320
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4330081744344572, guid: e80a6507a7703f049b567e7488776470,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2020104319}
+  m_LocalRotation: {x: 2.7742633e-25, y: -6.2019005e-17, z: 0.17666553, w: 0.98427093}
+  m_LocalPosition: {x: -0.07556347, y: -1.1740609e-16, z: -5.673066e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 38814327}
+  m_Father: {fileID: 280494652}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

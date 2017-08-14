@@ -7,21 +7,34 @@ public class ARPGCamera : MonoBehaviour {
 
     [Header("Camera Settings")]
     public Transform TrackingTarget = null;
-    public float ZoomAmount = 5.0f;
+    public float HeightOffset = 0.0f; 
+    private float ZoomAmount = 5.0f;
+    [Header("Camera Zoom")]
+    [Tooltip("The number of intervals between the minimum and maximum zoom")]
     public float ZoomIntervals = 1.0f;
-    public float ZoomMin = 0.0f;
+    [Tooltip("The minimum zoom the camera can go.")]
+    public float ZoomMin = 1.0f;
+    [Tooltip("The maximum zoom the camera can go")]
     public float ZoomMax = 10.0f;
-    [Range(0,90)]
-    public float CameraAngle = 25.0f;
-    public float ZoomAngleRatio = 25.0f;
+    [Header("Camera Angle")]
+    [Tooltip("The minimum angle the camera can go.")]
+    public float CameraMin = 25.0f;
+    [Tooltip("The maximum angle the camera can go")]
+    public float CameraMax = 75.0f;
+    private float CameraAngle = 25.0f;
+    private float ZoomAngleRatio = 25.0f;
     
 	// Use this for initialization
 	void Start () {
+        //Set intial arm position
+        Vector3 ArmPosition = new Vector3(0.0f, HeightOffset, 0.0f);
+        transform.position = ArmPosition;
         //Set Inital Camera Zoom
         Vector3 CameraPosition = new Vector3(0.0f, 0.0f, -ZoomAmount);
         Camera.main.transform.localPosition = CameraPosition;
         //Set Inital Camera Angle
-        CameraAngle = ZoomAmount * ZoomAngleRatio;
+        ZoomAngleRatio = (CameraMax - CameraMin) / ZoomMax;
+        CameraAngle = CameraMin + ZoomAmount * ZoomAngleRatio;
         Vector3 CameraRotation = new Vector3(CameraAngle, 0.0f, 0.0f);
         transform.rotation = Quaternion.Euler(CameraRotation);
 
@@ -34,9 +47,9 @@ public class ARPGCamera : MonoBehaviour {
             if(ZoomAmount > ZoomMin)
             {
                 //Update Camera Zoom and Angle
-                ZoomAmount -= ZoomIntervals;           
-                CameraAngle = ZoomAmount * ZoomAngleRatio;
-           
+                ZoomAmount -= ZoomIntervals;
+                CameraAngle = CameraMin + ZoomAmount * ZoomAngleRatio;
+
                 MoveCamera(ZoomAmount, CameraAngle);
             }
         }
@@ -46,13 +59,13 @@ public class ARPGCamera : MonoBehaviour {
             {
                 //Update Camera Zoom and Angle
                 ZoomAmount += ZoomIntervals;
-                CameraAngle = ZoomAmount * ZoomAngleRatio;
+                CameraAngle = CameraMin + ZoomAmount * ZoomAngleRatio;
 
                 MoveCamera(ZoomAmount, CameraAngle);
             }
         }
         //Update position to tracked object
-        transform.position = TrackingTarget.position;
+        transform.position = TrackingTarget.position + new Vector3(0.0f, HeightOffset, 0.0f);
 	}
 
     public void MoveCamera(float _Zoom, float _Angle)

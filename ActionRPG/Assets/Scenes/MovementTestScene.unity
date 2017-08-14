@@ -384,9 +384,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 960319479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba7383fa6a969bc42bb0c783f53b86b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b61710e9a199cf4b969c5cc3c149bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 5
+  TurnRate: 1
 --- !u!54 &960319481
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -755,9 +757,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1892333651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e140dc1a06b52429d042e79274d174, type: 3}
+  m_Script: {fileID: 11500000, guid: a13ab7c5e97b5074493e2c6e8b4d4104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TrackingTarget: {fileID: 960319485}
+  HeightOffset: 0
+  ZoomIntervals: 1
+  ZoomMin: 1
+  ZoomMax: 10
+  CameraMin: 25
+  CameraMax: 75
 --- !u!4 &1892333653
 Transform:
   m_ObjectHideFlags: 0
