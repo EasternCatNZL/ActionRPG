@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Animator))]
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,11 +19,14 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 MovePosition;
 
     private Rigidbody Rigid;
+    private Animator Animator; 
 
     // Use this for initialization
     void Start()
     {
         Direction = new Vector3(0.0f, 0.0f, 0.0f);
+
+        Animator = GetComponent<Animator>();
 
         Rigid = GetComponent<Rigidbody>();
         Rigid.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
@@ -36,14 +40,11 @@ public class PlayerMovement : MonoBehaviour
 
             CurrentSpeed = Speed;
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Vector3 MouseHit = MouseTarget.GetWorldMousePos();
 
-            RaycastHit hit;
-            Physics.Raycast(ray, out hit, Mathf.Infinity);
+            MovePosition = MouseHit;
 
-            MovePosition = hit.point;
-
-            Direction += hit.point - transform.position;
+            Direction += MouseHit - transform.position;
 
             Direction.Normalize();
 
@@ -59,23 +60,31 @@ public class PlayerMovement : MonoBehaviour
             //Move the player forward
             if (!Input.GetKey(KeyCode.LeftShift))
             {
-                if (Mathf.Abs(Vector3.Distance(transform.position, hit.point)) > 0.7f)
+                Animator.SetBool("Moving", true);
+                if (Mathf.Abs(Vector3.Distance(transform.position, MouseHit)) > 0.7f)
                 {
                     Rigid.MovePosition(transform.position + transform.forward * CurrentSpeed * Time.deltaTime);
                 }
             }
+            //Stop the player when they press shift
             else
             {
+                Animator.SetBool("Moving", false);
                 MovePosition = transform.position;
             }
 
         }
-        if(Vector3.Distance(transform.position, MovePosition) > 0.7f)
+        //Continue to move the player forward after mouse click
+        if (Vector3.Distance(transform.position, MovePosition) > 0.7f)
         {
             Direction += MovePosition - transform.position;
 
             Direction.Normalize();
             Rigid.MovePosition(transform.position + Direction * CurrentSpeed * Time.deltaTime);
+        }
+        else
+        {
+            Animator.SetBool("Moving", false);
         }
         Debug.DrawLine(transform.position, MovePosition, Color.red);
     }
