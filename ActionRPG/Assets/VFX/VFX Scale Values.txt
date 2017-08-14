@@ -1,0 +1,3 @@
+push out vfx y= 0.4
+pull in vfx y= 0.5
+bullet hit y=0.82

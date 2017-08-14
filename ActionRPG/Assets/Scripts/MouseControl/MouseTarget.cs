@@ -9,6 +9,8 @@ public class MouseTarget : MonoBehaviour {
     //transform for other scripts
     //return the position in world floor surface that the mouse is at
 
+    private static Vector3 lastPos;
+
     static public Vector3 GetWorldMousePos()
     {
         //raycast stuff
@@ -22,10 +24,10 @@ public class MouseTarget : MonoBehaviour {
             //dubug spawn object
             //GameObject clone = thing;
             //Instantiate(clone, rayHit.point, Quaternion.identity);
-
+            lastPos = rayHit.point;
             //set the mouse screen to world pos
             return rayHit.point;
         }
-        return Vector3.zero;
+        return lastPos;
     }
 }
