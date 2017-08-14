@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody), typeof(Animator), typeof(CapsuleCollider))]
 
 public class PlayerMovement : MonoBehaviour
 {

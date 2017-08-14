@@ -1,0 +1,4 @@
+For the attack animations frames 12-54 are the attack (shots fired 4 of them). 
+12-28 is for one single shot fired. after 28 frame 54 sets it back to the idle.
+if its too mucch trouble just tell me and ill do it lol. 
+
