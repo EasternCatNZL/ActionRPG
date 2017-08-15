@@ -21,17 +21,13 @@ public class EnemyAIVersion2 : MonoBehaviour {
     //variable for WANDER
     public GameObject[] Waypoints;
     private int WaypointIndex;
-    public float WanderSpeed = 3.0f;
+    public float WanderSpeed = 1.0f;
 
     //variable for SEEK
-    public float SeekSpeed = 6.0f;
+    public float SeekSpeed = 2.0f;
     public float RotationSpeed = 3.0f;
-    public GameObject Target;
-    public Transform Player;
-    
-    //variables for Sight
-    public float HeightMultiplier = 1.0f;
-    public float sightDistance = 10.0f;
+    private GameObject Target;
+    private Transform Player;
 
     //Animations
     private Animator Animator;
@@ -42,6 +38,9 @@ public class EnemyAIVersion2 : MonoBehaviour {
 
         NavAgent = GetComponent<NavMeshAgent>();
         NavAgent.updatePosition = true;
+
+        Target = GameObject.FindGameObjectWithTag("Player");
+        Player = GameObject.FindGameObjectWithTag("Player").transform;      
        
         Waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         WaypointIndex = Random.Range(0, Waypoints.Length);
@@ -95,11 +94,24 @@ public class EnemyAIVersion2 : MonoBehaviour {
     {
         NavAgent.speed = SeekSpeed;
         NavAgent.SetDestination(Target.transform.position);
+        if(DistanceToPlayer <= 1.0f)
+        {
+            NavAgent.isStopped = true;
+        }
+        else if(DistanceToPlayer > 1.0f)
+        {
+            NavAgent.isStopped = false;
+        }
+        if(DistanceToPlayer > 10.0f)
+        {
+            state = EnemyAIVersion2.State.WANDER;
+        }
+
     }
 
     void CheckSeekRange()
     {
-        if(DistanceToPlayer < 15.0f)
+        if(DistanceToPlayer < 5.0f)
         {
             state = EnemyAIVersion2.State.SEEK;
         }
@@ -107,41 +119,5 @@ public class EnemyAIVersion2 : MonoBehaviour {
         {
             state = EnemyAIVersion2.State.WANDER;
         }
-    }
-
-    /*
-    void FixedUpdate()
-    {
-        RaycastHit hit;
-        Debug.DrawRay(transform.position + Vector3.up * HeightMultiplier, transform.forward * sightDistance, Color.red);
-        Debug.DrawRay(transform.position + Vector3.up * HeightMultiplier, (transform.forward + transform.right).normalized * sightDistance, Color.red);
-        Debug.DrawRay(transform.position + Vector3.up * HeightMultiplier, (transform.forward - transform.right).normalized * sightDistance, Color.red);
-
-        if (Physics.Raycast(transform.position + Vector3.up * HeightMultiplier, transform.forward, out hit, sightDistance))
-        {
-            if (hit.collider.gameObject.tag == "Player")
-            {
-                state = EnemyAIVersion2.State.SEEK;
-                Target = hit.collider.gameObject;
-            }
-        }
-        if (Physics.Raycast(transform.position + Vector3.up * HeightMultiplier, (transform.forward + transform.right).normalized, out hit, sightDistance))
-        {
-            if (hit.collider.gameObject.tag == "Player")
-            {
-                state = EnemyAIVersion2.State.SEEK;
-                Target = hit.collider.gameObject;
-            }
-        }
-        if (Physics.Raycast(transform.position + Vector3.up * HeightMultiplier, (transform.forward - transform.right).normalized, out hit, sightDistance))
-        {
-            if (hit.collider.gameObject.tag == "Player")
-            {
-                state = EnemyAIVersion2.State.SEEK;
-                Target = hit.collider.gameObject;
-            }
-        }
-    }
-    */
-   
+    }   
 }

@@ -268,11 +268,6 @@ Transform:
   m_Father: {fileID: 894688855}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &162845382 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1038248258693994, guid: 002daa06c7daa4d44b245efba3c84e9c,
-    type: 2}
-  m_PrefabInternal: {fileID: 629473456}
 --- !u!4 &162845383 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4718609044167766, guid: 002daa06c7daa4d44b245efba3c84e9c,
@@ -2113,7 +2108,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1938714841}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10510ec675c85a348ae72ddb3dc28bb8, type: 3}
   m_Name: 
@@ -2125,11 +2120,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  WanderSpeed: 3
+  WanderSpeed: 1
   SeekSpeed: 2
   RotationSpeed: 3
-  Target: {fileID: 162845382}
-  Player: {fileID: 162845383}
   HeightMultiplier: 1
   sightDistance: 10
 --- !u!195 &1938714846
