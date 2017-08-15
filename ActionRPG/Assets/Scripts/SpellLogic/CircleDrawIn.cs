@@ -27,6 +27,7 @@ public class CircleDrawIn : MonoBehaviour {
     //public GameObject drawInParticle;
 
     private float startTime = 0.0f; //time this spell started, for timing
+    private bool hasDealtDamage = false; //checks if damage has been dealt
 
     // Use this for initialization
     void Start () {
@@ -41,9 +42,10 @@ public class CircleDrawIn : MonoBehaviour {
         {
             Finished();
         }
-        else if (Time.time > startTime + damageTime)
+        else if (Time.time > startTime + damageTime && !hasDealtDamage)
         {
             DamageEnemies();
+            hasDealtDamage = true;
         }
 	}
 
