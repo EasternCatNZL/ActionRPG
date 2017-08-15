@@ -10,7 +10,8 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     private PlayerProgressionManager progressionManager;
 
     [Header("Resource vars")]
-    public float healthValue = 2.0f; //health value
+    public float maxHealth = 2.0f;
+    private float healthValue; //health value
     public float expGiven = 1.0f; //exp given to player when slain
 
     [Header("Drops")]
@@ -19,8 +20,12 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     public float healthDropAmount; //health value on health drop
     public float manaDropAmount; //mana value on mana drop
 
+    [Header("UI")]
+    public ProgressBar HealthBar;
+
 	// Use this for initialization
 	void Start () {
+        healthValue = maxHealth;
         progressionManager = GameObject.FindGameObjectWithTag("playerProgressionTag").GetComponent<PlayerProgressionManager>();
 	}
 	
@@ -33,6 +38,7 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     public void DecreaseHealth(float damage)
     {
         healthValue -= damage;
+        if(HealthBar) HealthBar.SetPercentage(healthValue / maxHealth);
         CheckDead();
     }
 

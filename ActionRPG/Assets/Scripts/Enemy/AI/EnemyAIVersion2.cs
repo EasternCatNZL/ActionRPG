@@ -33,6 +33,9 @@ public class EnemyAIVersion2 : MonoBehaviour {
     public float HeightMultiplier = 1.0f;
     public float sightDistance = 10.0f;
 
+    //Animations
+    private Animator Animator;
+
 
 	// Use this for initialization
 	void Start () {
@@ -46,6 +49,8 @@ public class EnemyAIVersion2 : MonoBehaviour {
         state = EnemyAIVersion2.State.WANDER;
 
         alive = true;
+
+        Animator = GetComponent<Animator>();
 
         StartCoroutine("FSM");
 	}
@@ -84,10 +89,6 @@ public class EnemyAIVersion2 : MonoBehaviour {
         {
             WaypointIndex = Random.Range(0, Waypoints.Length);
         }
-        else
-        {
-
-        }
     }
 
     void Seek()
@@ -101,6 +102,10 @@ public class EnemyAIVersion2 : MonoBehaviour {
         if(DistanceToPlayer < 15.0f)
         {
             state = EnemyAIVersion2.State.SEEK;
+        }
+        else
+        {
+            state = EnemyAIVersion2.State.WANDER;
         }
     }
 
