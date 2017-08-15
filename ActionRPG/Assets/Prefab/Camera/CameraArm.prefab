@@ -131,16 +131,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1192717381837996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a9a37fbe0f6b0b41a1480a60a2771bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 06e140dc1a06b52429d042e79274d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TrackingTarget: {fileID: 0}
-  ZoomAmount: 5
+  HeightOffset: 0.4
   ZoomIntervals: 1
-  ZoomMin: 0
-  ZoomMax: 10
-  CameraAngle: 25
-  ZoomAngleRatio: 25
+  ZoomMin: 2
+  ZoomMax: 6
+  CameraMin: 35
+  CameraMax: 55
 --- !u!124 &124563634580471160
 Behaviour:
   m_ObjectHideFlags: 1
