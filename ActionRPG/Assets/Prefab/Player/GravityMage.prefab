@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114111676668497916}
   - component: {fileID: 54618900649541432}
   - component: {fileID: 136660030896647274}
-  - component: {fileID: 114048409500970444}
+  - component: {fileID: 114877309339152182}
   m_Layer: 0
   m_Name: GravityMage
   m_TagString: Player
@@ -1330,27 +1330,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114048409500970444
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1038248258693994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cabae49ef23882240853df3c49df6393, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  basicBullet: {fileID: 0}
-  biggerBullet: {fileID: 0}
-  Shockwave: {fileID: 0}
-  PushOut: {fileID: 0}
-  GravityLift: {fileID: 0}
-  GravityHole: {fileID: 0}
-  SpellOneLearned: 0
-  SpellTwoLearned: 0
-  SpellThreeLearned: 0
-  SpellFourLearned: 0
 --- !u!114 &114111676668497916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1364,7 +1343,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Deadzone: 0.5
   Speed: 3
-  TurnRate: 0.2
+  TurnRate: 1
+--- !u!114 &114877309339152182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038248258693994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cabae49ef23882240853df3c49df6393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicBullet: {fileID: 0}
+  Shockwave: {fileID: 0}
+  PushOut: {fileID: 0}
+  GravityLift: {fileID: 0}
+  DonutSpell: {fileID: 0}
+  SpellOneLearned: 0
+  SpellTwoLearned: 0
+  SpellThreeLearned: 0
+  SpellFourLearned: 0
 --- !u!136 &136660030896647274
 CapsuleCollider:
   m_ObjectHideFlags: 1
