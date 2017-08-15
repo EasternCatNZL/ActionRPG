@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4421512580221448}
-  - component: {fileID: 114037024363404644}
+  - component: {fileID: 114102478659254142}
   m_Layer: 0
   m_Name: DonutSpell
   m_TagString: Untagged
@@ -34,13 +34,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1893899398232184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.51, y: 0, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114037024363404644
+--- !u!114 &114102478659254142
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,14 +48,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1893899398232184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24e4bfbed15fa1246a979e43bea0be10, type: 3}
+  m_Script: {fileID: 11500000, guid: 213ca1fe032d6434b86f0065603503cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectRadius: 4
-  raiseForce: 0.8
-  dropForce: 5
-  spellLifetime: 3
-  disableTime: 3
-  damageValue: 2
-  raiseEndTime: 1
-  dropTime: 1.5
+  enemiesInSphere: []
+  enemies: []
+  outerRadius: 5
+  innerRadius: 3
+  spellLifetime: 4
+  resourceCost: 2
+  damageValue: 0.2
+  slowAmount: 0.8
+  tickTime: 0.3
+  slowTime: 0.5
