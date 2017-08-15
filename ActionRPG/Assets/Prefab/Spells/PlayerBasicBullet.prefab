@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1321912636836430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4.6}
+  m_LocalPosition: {x: 1.8, y: 0, z: -13.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4821973684931428}
@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270388312040072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalPosition: {x: -16.721, y: 0.472, z: 17.857}
   m_LocalScale: {x: 0.050000068, y: 0.050000016, z: 0.05000006}
   m_Children:
   - {fileID: 4437240252983566}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b56b1e0be249b1d4da8481a55251c3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flightSpeed: 3
+  flightSpeed: 0.1
   damageValue: 0.5
   impactVfxObject: {fileID: 1647901325569144, guid: e2416d0193b702542a0979c2672063be,
     type: 2}
@@ -113,7 +113,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 2.13
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198621017572101730
 ParticleSystem:
@@ -174,7 +174,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1447040806
+  randomSeed: 1642176152
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2689,7 +2689,7 @@ ParticleSystem:
         m_RotationOrder: 4
     minVertexDistance: 0.2
     textureMode: 0
-    worldSpace: 0
+    worldSpace: 1
     dieWithParticles: 1
     sizeAffectsWidth: 1
     sizeAffectsLifetime: 0

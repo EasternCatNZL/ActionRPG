@@ -79,7 +79,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
         //rotationDirection.eulerAngles = directionToFire;
         //create a shot and fire it
         GameObject bulletClone = basicBullet;
-        Instantiate(bulletClone, transform.position, rotationDirection);
+        Instantiate(bulletClone, transform.position + new Vector3(0f, 0.5f, 0f), rotationDirection);
     }
 
     ////uses spell 1 - big shot
@@ -116,7 +116,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
         //create spell and fire it
         GameObject spellClone = PushOut;
         //spawn into the world
-        Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
+
     }
 
     //use spell four - lift and drop
