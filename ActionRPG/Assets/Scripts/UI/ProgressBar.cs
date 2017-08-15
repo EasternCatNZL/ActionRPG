@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ProgressBar : MonoBehaviour {
 
-    public GameObject progressBar;
+    public Transform progressBar;
 
     public void SetPercentage(float _Percentage)
     {
-        transform.localScale = new Vector3(_Percentage, transform.localScale.y, transform.localScale.z);
+        progressBar.localScale = new Vector3(_Percentage, progressBar.localScale.y, progressBar.localScale.z);
     }
 }

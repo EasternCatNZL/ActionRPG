@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a630d77e2d2efa84d95a92875b9dd8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progressBar: {fileID: 2112428577}
+  progressBar: {fileID: 2112428578}
 --- !u!114 &218290100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,6 +850,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114877309339152182, guid: 002daa06c7daa4d44b245efba3c84e9c,
+        type: 2}
+      propertyPath: DonutSpell
+      value: 
+      objectReference: {fileID: 1893899398232184, guid: d208a004030115847a6d485e1ef95f77,
+        type: 2}
+    - target: {fileID: 114877309339152182, guid: 002daa06c7daa4d44b245efba3c84e9c,
+        type: 2}
+      propertyPath: Shockwave
+      value: 
+      objectReference: {fileID: 1036824766867770, guid: df99196d3ce5c3c47b6a3a3588f98adc,
+        type: 2}
+    - target: {fileID: 114877309339152182, guid: 002daa06c7daa4d44b245efba3c84e9c,
+        type: 2}
+      propertyPath: GravityLift
+      value: 
+      objectReference: {fileID: 1783060964329678, guid: bd3524c12b63cdc4bb6f5c741df048d1,
+        type: 2}
+    - target: {fileID: 114877309339152182, guid: 002daa06c7daa4d44b245efba3c84e9c,
+        type: 2}
+      propertyPath: PushOut
+      value: 
+      objectReference: {fileID: 1878716221031060, guid: a1af488f27612b04a8bb213d4714c98d,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 002daa06c7daa4d44b245efba3c84e9c, type: 2}
   m_IsPrefabParent: 0
@@ -1624,6 +1648,54 @@ Transform:
   m_Father: {fileID: 413245192}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1585831126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1585831128}
+  - component: {fileID: 1585831127}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: playerProgressionTag
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1585831127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1585831126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591393e976ef6ce4bb20f116044f1edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingLevel: 1
+  maxLevel: 10
+  unlockSpellTwoLevel: 2
+  unlockSpellThreeLevel: 4
+  unlockSpellFourLevel: 7
+  expBase: 100
+  expPerLevelScale: 1.1
+  expIncreasePerLevel: 50
+--- !u!4 &1585831128
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1585831126}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.257776, y: 0.31739902, z: 19.260464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1614852910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1998,7 @@ GameObject:
   - component: {fileID: 1938714845}
   - component: {fileID: 1938714846}
   - component: {fileID: 1938714842}
+  - component: {fileID: 1938714848}
   m_Layer: 0
   m_Name: Shrimpy
   m_TagString: Enemy
@@ -2040,13 +2113,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerProgressionTag: 
-  maxHealth: 2
+  maxHealth: 10
+  healthValue: 0
   expGiven: 1
   healthDrop: {fileID: 0}
   manaDrop: {fileID: 0}
   healthDropAmount: 0
   manaDropAmount: 0
-  HealthBar: {fileID: 0}
+  HealthBar: {fileID: 218290099}
+--- !u!54 &1938714848
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938714841}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1962377915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,7 +2216,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2112428577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalPosition: {x: 5.04, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 218290098}
@@ -2164,7 +2253,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5d5718b7c0f07984e8465700459cbde9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

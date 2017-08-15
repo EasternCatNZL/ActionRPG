@@ -30,7 +30,7 @@ public class DonutGravityOrbit : MonoBehaviour {
 	void Update () {
         if (Time.time > startTime + spellLifetime)
         {
-            //Finished();
+            Finished();
         }
         else if (Time.time > lastTickTime + tickTime)
         {

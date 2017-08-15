@@ -11,7 +11,7 @@ public class EnemyResourceBehaviour : MonoBehaviour {
 
     [Header("Resource vars")]
     public float maxHealth = 2.0f;
-    private float healthValue; //health value
+    public float healthValue; //health value
     public float expGiven = 1.0f; //exp given to player when slain
 
     [Header("Drops")]
@@ -38,6 +38,7 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     public void DecreaseHealth(float damage)
     {
         healthValue -= damage;
+        print(healthValue);
         if(HealthBar) HealthBar.SetPercentage(healthValue / maxHealth);
         CheckDead();
     }

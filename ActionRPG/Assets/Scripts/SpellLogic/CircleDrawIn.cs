@@ -91,7 +91,7 @@ public class CircleDrawIn : MonoBehaviour {
         for (int i = 0; i < enemies.Count; i++)
         {
             //apply damage
-            enemies[i].GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
+            if(enemies[i]) enemies[i].GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
         }
     }
 
