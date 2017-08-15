@@ -19,7 +19,7 @@ public class EnemyAIVersion2 : MonoBehaviour {
     public float DistanceToPlayer;
 
     //variable for WANDER
-    public GameObject[] Waypoints;
+    private GameObject[] Waypoints;
     private int WaypointIndex;
     public float WanderSpeed = 1.0f;
 
