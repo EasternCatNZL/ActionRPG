@@ -9,14 +9,24 @@ public class GravityLiftSpell : MonoBehaviour {
     private List<GameObject> enemies = new List<GameObject>();
 
     [Header("Spell vars")]
-    public float effectRadius = 4.0f; //the aoe radius
-    public float raiseForce = 0.8f; //amount of force applied to raise target
-    public float dropForce = 5.0f; //amount of force applied on decent
-    public float spellLifetime = 3.0f; //the lifetime of the spell
-    public float disableTime = 3.0f; //sent to enemy, disables for this time
-    public float damageValue = 2.0f; //set damage value <- multiply with stats?
-    public float raiseEndTime = 1.0f; //Time rise ends
-    public float dropTime = 1.5f; //time that the enemy is dropped
+    [Tooltip("the aoe radius")]
+    public float effectRadius = 4.0f;
+    [Tooltip("amount of force applied to raise target")]
+    public float raiseForce = 0.8f;
+    [Tooltip("amount of force applied on decent")]
+    public float dropForce = 5.0f;
+    [Tooltip("the lifetime of the spell")]
+    public float spellLifetime = 3.0f;
+    [Tooltip("sent to enemy, disables for this time")]
+    public float disableTime = 3.0f;
+    [Tooltip("set damage value <- multiply with stats?")]
+    public float damageValue = 2.0f;
+    [Tooltip("Time rise ends")]
+    public float raiseEndTime = 1.0f;
+    [Tooltip("time that the enemy is dropped")]
+    public float dropTime = 1.5f;
+    [Tooltip("Accompanying particle effect")]
+    public ParticleSystem dropParticle;
 
     private float startTime = 0.0f;
 
@@ -27,6 +37,7 @@ public class GravityLiftSpell : MonoBehaviour {
     // Use this for initialization
     void Start () {
         startTime = Time.time;
+        dropParticle.Stop();
 	}
 	
 	// Update is called once per frame
@@ -107,6 +118,8 @@ public class GravityLiftSpell : MonoBehaviour {
             //apply damage
             enemies[i].GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
         }
+        //have particle play
+        dropParticle.Play();
         //set has dropped enemies to true
         hasDropped = true;
     }

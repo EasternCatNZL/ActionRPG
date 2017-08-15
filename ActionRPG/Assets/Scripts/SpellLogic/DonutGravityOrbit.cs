@@ -101,9 +101,9 @@ public class DonutGravityOrbit : MonoBehaviour {
     {
         //gizmo debug of outer sphere
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, outerRadius);
+        Gizmos.DrawWireSphere(transform.position, outerRadius);
         //gizmo debug of inner sphere
         Gizmos.color = Color.red;
-        Gizmos.DrawSphere(transform.position, innerRadius);
+        Gizmos.DrawWireSphere(transform.position, innerRadius);
     }
 }
