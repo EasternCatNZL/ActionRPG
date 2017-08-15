@@ -9,19 +9,31 @@ public class CirclePushOut : MonoBehaviour {
     private List<GameObject> enemies = new List<GameObject>();
 
     [Header("Spell vars")]
+    [Tooltip("Radius of spell")]
     public float effectRadius = 4.0f;
+    [Tooltip("Amount of damage dealt")]
     public float damageValue = 3.0f;
+    [Tooltip("lifetime of the spell")]
+    public float spellLifetime = 2.0f;
+    [Tooltip("The scale applied to push force")]
     public float pushForce = 1.2f;
+    [Tooltip("Upward alteration to level out with units")]
     public float upwardPull = 0.5f;
+
+    private float startTime = 0.0f; //time this spell started, for timing
 
     // Use this for initialization
     void Start () {
+        startTime = Time.time;
         Attack();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Time.time > startTime + spellLifetime)
+        {
+            Destroy(gameObject);
+        }
 	}
 
     //gets all the enemies in the area
@@ -62,6 +74,6 @@ public class CirclePushOut : MonoBehaviour {
         //does all logic then destroys self
         GetAllInArea();
         PushOut();
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
