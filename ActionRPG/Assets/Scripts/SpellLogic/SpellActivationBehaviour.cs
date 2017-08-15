@@ -10,11 +10,10 @@ public class SpellActivationBehaviour : MonoBehaviour {
     //bullet object
     [Header("Spell objects")]
     public GameObject basicBullet;
-    public GameObject biggerBullet;
     public GameObject Shockwave;
     public GameObject PushOut;
     public GameObject GravityLift;
-    public GameObject GravityHole;
+    public GameObject DonutSpell;
 
     ////indicator objects, displays on the ground
     //[Header("Indicators")]
@@ -46,7 +45,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            UseSpellOne();
+            FireBasicShot();
         }
         else if (Input.GetKeyDown(KeyCode.W))
         {
@@ -83,22 +82,22 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Instantiate(bulletClone, transform.position, rotationDirection);
     }
 
-    //uses spell 1 - big shot
-    void UseSpellOne()
-    {
-        //get the direction of mouse from self
-        //mouseTarget.GetWorldMousePos();
-        Vector3 directionToFire = MouseTarget.GetWorldMousePos() - transform.position;
-        Quaternion rotationDirection = new Quaternion();
-        rotationDirection = Quaternion.LookRotation(directionToFire);
-        //rotationDirection.eulerAngles = directionToFire;
-        //create a shot and fire it
-        GameObject bulletClone = biggerBullet;
-        //spawn into the world
-        Instantiate(bulletClone, transform.position, rotationDirection);
-    }
+    ////uses spell 1 - big shot
+    //void UseSpellOne()
+    //{
+    //    //get the direction of mouse from self
+    //    //mouseTarget.GetWorldMousePos();
+    //    Vector3 directionToFire = MouseTarget.GetWorldMousePos() - transform.position;
+    //    Quaternion rotationDirection = new Quaternion();
+    //    rotationDirection = Quaternion.LookRotation(directionToFire);
+    //    //rotationDirection.eulerAngles = directionToFire;
+    //    //create a shot and fire it
+    //    GameObject bulletClone = biggerBullet;
+    //    //spawn into the world
+    //    Instantiate(bulletClone, transform.position, rotationDirection);
+    //}
 
-    //use spell two - pull in
+    ///use spell two - pull in
     void UseSpellTwo()
     {
         //get the location of target
@@ -137,7 +136,7 @@ public class SpellActivationBehaviour : MonoBehaviour {
         //get the location of target
         //mouseTarget.GetWorldMousePos();
         //create spell and fire it
-        GameObject spellClone = GravityHole;
+        GameObject spellClone = DonutSpell;
         //spawn into the world
         Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
     }
