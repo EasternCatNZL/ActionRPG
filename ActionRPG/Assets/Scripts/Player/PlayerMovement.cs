@@ -7,6 +7,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
+    [Range(0, 1)]
+    public float Deadzone = 0.5f;
     public float Speed = 5.0f;
     private float CurrentSpeed = 0.0f;
     [Range(0, 1)]
@@ -60,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
             if (!Input.GetKey(KeyCode.LeftShift))
             {
                 Animator.SetBool("Moving", true);
-                if (Mathf.Abs(Vector3.Distance(transform.position, MouseHit)) > 0.7f)
+                if (Mathf.Abs(Vector3.Distance(transform.position, MouseHit)) > Deadzone)
                 {
                     Rigid.MovePosition(transform.position + transform.forward * CurrentSpeed * Time.deltaTime);
                 }
@@ -74,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
         //Continue to move the player forward after mouse click
-        if (Vector3.Distance(transform.position, MovePosition) > 0.7f)
+        if (Vector3.Distance(transform.position, MovePosition) > Deadzone)
         {
             Direction += MovePosition - transform.position;
 
