@@ -13,11 +13,12 @@ public class BossAI : MonoBehaviour {
     [Header("Attack Properties")]
     public float AttackCooldown = 1.0f;
     [Header("Random Attack Properties")]
+    public GameObject bomb = null;
     public float castRadius = 5.0f;
     public float attackRadius = 1.0f;
     public float attackDamage = 2.0f;
     public float attackDelay = 2.0f;
-    private bool CanRandAttack = false;
+    private bool CanRandAttack = true;
     [Header("Pullin' Attack Properties")]
     public float pullStrength = 4.0f;
     public GameObject boulder = null;
@@ -63,25 +64,26 @@ public class BossAI : MonoBehaviour {
 
     private void AttackRandomArea()
     {
-        print("Attack!");
         Vector3 RandomPos = new Vector3(
             Mathf.Sin(Random.Range(0f,360f) * PI / 180f) * (Random.Range(0f, castRadius * 2) - castRadius),
             0f,
             Mathf.Cos(Random.Range(0f,360f) * PI / 180f) * (Random.Range(0f, castRadius * 2) - castRadius)
             );
         lastAttackPos = transform.position + RandomPos;
-        print(Random.Range(0f, castRadius * 2) - castRadius);
-        print(RandomPos.ToString());
-        print(lastAttackPos);
+        StartCoroutine(DelayAttack(lastAttackPos));
+        //print(Random.Range(0f, castRadius * 2) - castRadius);
+        //print(RandomPos.ToString());
+        //print(lastAttackPos);
     }
 
     private IEnumerator DelayAttack(Vector3 _AttackPos)
     {
         yield return new WaitForSeconds(attackDelay);
-        if(Vector3.Distance(_AttackPos, Player.transform.position) < attackRadius)
-        {
-            Player.GetComponent<ResourceManagement>().DamageHealth(attackDamage);
-        }
+        Instantiate(bomb, _AttackPos + new Vector3(0f, 2f, 0f), Random.rotation);
+        //if(Vector3.Distance(_AttackPos, Player.transform.position) < attackRadius)
+        //{
+        //    Player.GetComponent<ResourceManagement>().DamageHealth(attackDamage);
+        //}
     }
 
     private void ConsumeAttack()

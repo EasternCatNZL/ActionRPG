@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 PrevDirection;
 
     private Vector3 MovePosition;
+    static private bool DoMove = false;
 
     private Rigidbody Rigid;
     private Animator Animator; 
@@ -66,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Rigid.MovePosition(transform.position + transform.forward * CurrentSpeed * Time.deltaTime);
                 }
+                DoMove = true;
             }
             //Stop the player when they press shift
             else
@@ -75,12 +77,9 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-        else
-        {
-            MovePosition = transform.position;
-        }
+
         //Continue to move the player forward after mouse click
-        if (Vector3.Distance(transform.position, MovePosition) > Deadzone)
+        if (Vector3.Distance(transform.position, MovePosition) > Deadzone && DoMove)
         {
             Direction += MovePosition - transform.position;
 
@@ -90,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             Animator.SetBool("Moving", false);
+            DoMove = false;
         }
         Debug.DrawLine(transform.position, MovePosition, Color.red);
     }
@@ -97,5 +97,10 @@ public class PlayerMovement : MonoBehaviour
     public void SetSpeed(float _Speed)
     {
         Speed = _Speed;
+    }
+
+    static public void StopMovement()
+    {
+        DoMove = false;
     }
 }

@@ -146,6 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403907427}
   - component: {fileID: 1403907426}
+  - component: {fileID: 1403907428}
   m_Layer: 0
   m_Name: CameraArm
   m_TagString: Untagged
@@ -187,6 +188,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1403907428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403907425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41833cfe728109a4683c3bd17700b481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1406596020
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +525,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9eb7f8189dd0c2443a852e5837226971, type: 2}
+  - {fileID: 2100000, guid: 76728ae7b512ad745a63aa7ef2f06e8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

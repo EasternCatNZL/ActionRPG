@@ -9,8 +9,8 @@ public class Interactable : MonoBehaviour {
     public bool LoadLevel = false;
     public int SceneNumber = 0;
 
- 
-
+    //Interaction not triggering? Does the mouse manager exist?
+    
     public void Interact()
     {
         if (CanInteract)

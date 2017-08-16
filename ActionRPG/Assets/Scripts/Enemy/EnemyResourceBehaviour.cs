@@ -38,7 +38,6 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     public void DecreaseHealth(float damage)
     {
         healthValue -= damage;
-        print(healthValue);
         if(HealthBar) HealthBar.SetPercentage(healthValue / maxHealth);
         CheckDead();
     }

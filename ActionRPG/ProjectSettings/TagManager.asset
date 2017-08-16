@@ -8,6 +8,7 @@ TagManager:
   - Waypoint
   - playerProgressionTag
   - Manager
+  - Interactable
   layers:
   - Default
   - TransparentFX

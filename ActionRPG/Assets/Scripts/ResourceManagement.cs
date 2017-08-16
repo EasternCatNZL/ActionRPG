@@ -8,7 +8,7 @@ public class ResourceManagement : MonoBehaviour {
 
     public float MaxHealth;
     public float HealthRegen;
-    public float CurrentHealth;
+    private float CurrentHealth;
 
     public float MaxMana;
     public float ManaRegen;

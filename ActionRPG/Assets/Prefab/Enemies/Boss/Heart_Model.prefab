@@ -206,6 +206,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   Opening: {fileID: 0}
   AttackCooldown: 1
+  bomb: {fileID: 0}
   castRadius: 3
   attackRadius: 1
   attackDamage: 2

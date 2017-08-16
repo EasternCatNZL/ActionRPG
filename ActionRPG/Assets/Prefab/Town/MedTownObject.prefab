@@ -42,6 +42,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1387699406248822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4953845370726564}
+  - component: {fileID: 65002683829392024}
+  - component: {fileID: 114589188344598388}
+  m_Layer: 0
+  m_Name: FountainInteractable
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1552453443458874
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,7 +70,8 @@ GameObject:
   - component: {fileID: 33683811879630076}
   - component: {fileID: 23549386564599434}
   - component: {fileID: 95113990391663988}
-  m_Layer: 0
+  - component: {fileID: 64377843991108904}
+  m_Layer: 8
   m_Name: Town_Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,6 +89,7 @@ GameObject:
   - component: {fileID: 33288481888938316}
   - component: {fileID: 23946808604457846}
   - component: {fileID: 95975753530170220}
+  - component: {fileID: 64842847562478998}
   m_Layer: 0
   m_Name: Med_Town
   m_TagString: Untagged
@@ -117,6 +136,7 @@ Transform:
   - {fileID: 4673357289902396}
   - {fileID: 4696715330535604}
   - {fileID: 4493286901856920}
+  - {fileID: 4953845370726564}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -133,6 +153,19 @@ Transform:
   m_Father: {fileID: 4689782943927424}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4953845370726564
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387699406248822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.843, y: -3.745, z: 7.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4689782943927424}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23549386564599434
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -146,7 +179,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 69477310c52ca2f43bc868d5b55c4054, type: 2}
+  - {fileID: 2100000, guid: 76728ae7b512ad745a63aa7ef2f06e8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -178,10 +211,10 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 628afa3f2cf91bd4597f9cbbbf078c8d, type: 2}
-  - {fileID: 2100000, guid: 2aa833d4db45e844f9a52d201400d9f8, type: 2}
-  - {fileID: 2100000, guid: 7b70b70ca31783e4b821778e77c12c99, type: 2}
-  - {fileID: 2100000, guid: 9bc6b56d741873c4ca014ac41a1c75db, type: 2}
+  - {fileID: 2100000, guid: 76728ae7b512ad745a63aa7ef2f06e8a, type: 2}
+  - {fileID: 2100000, guid: 43258869616bb7841950bc836bb8a544, type: 2}
+  - {fileID: 2100000, guid: 68893959ccf37894daa0af6309049272, type: 2}
+  - {fileID: 2100000, guid: 6267ce4d9f6a8824b81ec5da19617a0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -214,6 +247,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1552453443458874}
   m_Mesh: {fileID: 4300000, guid: 503ed1b735aa0c0418254497a18ab86f, type: 3}
+--- !u!64 &64377843991108904
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1552453443458874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 503ed1b735aa0c0418254497a18ab86f, type: 3}
+--- !u!64 &64842847562478998
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755159342989262}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 527b4cc29e5226a4882ee67d87ef1b2f, type: 3}
+--- !u!65 &65002683829392024
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387699406248822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95113990391663988
 Animator:
   serializedVersion: 3
@@ -260,3 +333,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   townEntrySpawnPoint: {fileID: 4493286901856920}
+--- !u!114 &114589188344598388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387699406248822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae0094cf8a433448b5be5d42e3acbc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanInteract: 1
+  LoadLevel: 1
+  SceneNumber: 2

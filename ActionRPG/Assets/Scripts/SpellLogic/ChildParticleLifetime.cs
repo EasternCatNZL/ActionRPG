@@ -11,7 +11,9 @@ public class ChildParticleLifetime : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        partsSystem = GetComponentInChildren<ParticleSystem>();
+        partsSystem = GetComponent<ParticleSystem>();
+        if(!partsSystem)
+            partsSystem = GetComponentInChildren<ParticleSystem>();
         particleDuration = partsSystem.main.duration + partsSystem.main.startLifetimeMultiplier;
         //startTime = Time.time;
         //if (sound) sound.Play();
