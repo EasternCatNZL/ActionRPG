@@ -6,6 +6,9 @@ using DG.Tweening;
 //Manages the health and mana of entities
 public class ResourceManagement : MonoBehaviour {
 
+    public ProgressBarPositionBased HealthBar;
+    public ProgressBarPositionBased ManaBar;
+
     public float MaxHealth;
     public float HealthRegen;
     public float CurrentHealth;
@@ -32,12 +35,14 @@ public class ResourceManagement : MonoBehaviour {
             CurrentHealth += HealthRegen * Time.fixedDeltaTime;
             if (CurrentHealth > MaxHealth)
                 CurrentHealth = MaxHealth;
+            HealthBar.SetPercentage(CurrentHealth / MaxHealth);
         }
         if (CurrentMana < MaxMana)
         {
             CurrentMana += ManaRegen * Time.fixedDeltaTime;
             if (CurrentMana > MaxMana)
                 CurrentMana = MaxMana;
+            ManaBar.SetPercentage(CurrentMana / MaxMana);
         }     
         if(DotActive)
         {
@@ -47,7 +52,10 @@ public class ResourceManagement : MonoBehaviour {
                 CurrentHealth = Mathf.Round(CurrentHealth);
                 DotActive = false;
             }
+            HealthBar.SetPercentage(CurrentHealth / MaxHealth);
         }
+
+        
     }
 
     public float GetHeath()
@@ -67,6 +75,7 @@ public class ResourceManagement : MonoBehaviour {
         {
             GetComponent<DropTableManager>();
         }
+        HealthBar.SetPercentage(CurrentHealth / MaxHealth);
     }
 
     public void DamageHealthOverTime(float _TotalAmount, float _Time)
@@ -80,16 +89,19 @@ public class ResourceManagement : MonoBehaviour {
     public void HealHealth(float _Amount)
     {
         CurrentHealth += _Amount;
+        HealthBar.SetPercentage(CurrentHealth / MaxHealth);
     }
 
     public void HealMana(float _Amount)
     {
         CurrentMana += _Amount;
+        ManaBar.SetPercentage(CurrentMana / MaxMana);
     }
 
     public void DamageMana(float _Amount)
     {
         CurrentMana -= _Amount;
+        ManaBar.SetPercentage(CurrentMana / MaxMana);
     }
 
 }

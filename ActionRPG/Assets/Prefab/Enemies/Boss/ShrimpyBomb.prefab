@@ -609,6 +609,7 @@ GameObject:
   - component: {fileID: 135023377530509508}
   - component: {fileID: 54752960733191622}
   - component: {fileID: 114411823553582926}
+  - component: {fileID: 114180882070374446}
   m_Layer: 0
   m_Name: ShrimpyBomb
   m_TagString: Enemy
@@ -1236,6 +1237,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114180882070374446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969918203748116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee5098d2225575428c7a21d593733d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerProgressionTag: 
+  maxHealth: 1000
+  healthValue: 0
+  expGiven: 0
+  healthDrop: {fileID: 0}
+  manaDrop: {fileID: 0}
+  healthDropAmount: 0
+  manaDropAmount: 0
+  HealthBar: {fileID: 0}
 --- !u!114 &114411823553582926
 MonoBehaviour:
   m_ObjectHideFlags: 1

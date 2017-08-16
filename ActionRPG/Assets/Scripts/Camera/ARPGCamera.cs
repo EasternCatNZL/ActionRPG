@@ -41,7 +41,7 @@ public class ARPGCamera : MonoBehaviour {
 
         if (!TrackingTarget)
         {
-            Debug.LogError("Tracking target has not been set for the camera");
+            Debug.LogWarning("Tracking target has not been set for the camera");
             TrackingTarget = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
