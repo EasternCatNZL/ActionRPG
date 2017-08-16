@@ -623,10 +623,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a12d207c9fe5a034985a4b42b312fd7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectRadius: 4
+  effectRadius: 2.5
   damageValue: 3
-  pushForce: 1.2
-  upwardPull: 0.5
+  spellLifetime: 2
+  pushForce: 10
+  upwardPull: 5
 --- !u!198 &198021371847603418
 ParticleSystem:
   m_ObjectHideFlags: 1

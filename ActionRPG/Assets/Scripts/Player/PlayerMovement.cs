@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 PrevDirection;
 
     private Vector3 MovePosition;
-    static private bool DoMove = false;
+    private bool DoMove = false;
 
     private Rigidbody Rigid;
     private Animator Animator; 
@@ -94,12 +94,29 @@ public class PlayerMovement : MonoBehaviour
         Debug.DrawLine(transform.position, MovePosition, Color.red);
     }
 
+    public void FacePosition(Vector3 _pos)
+    {
+        Direction = _pos - transform.position;
+
+        Direction.Normalize();
+
+        //Player Rotations
+        if (Vector3.Dot(transform.right, Direction) < 0.0f)
+        {
+            transform.Rotate(0.0f, -Vector3.Angle(transform.forward, Direction), 0.0f);
+        }
+        if (Vector3.Dot(transform.right, Direction) > 0.0f)
+        {
+            transform.Rotate(0.0f, Vector3.Angle(transform.forward, Direction), 0.0f);
+        }
+    }
+
     public void SetSpeed(float _Speed)
     {
         Speed = _Speed;
     }
 
-    static public void StopMovement()
+    public void StopMovement()
     {
         DoMove = false;
     }

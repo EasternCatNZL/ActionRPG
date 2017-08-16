@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GravityLiftSpell : MonoBehaviour {
 
@@ -84,7 +85,8 @@ public class GravityLiftSpell : MonoBehaviour {
         for (int i = 0; i < enemies.Count; i++)
         {
             //prevent enemies from moving
-
+            enemies[i].GetComponent<NavMeshAgent>().enabled = false;
+            enemies[i].GetComponent<EnemyAIVersion2>().enabled = false;
             //remove gravity
             enemies[i].GetComponent<Rigidbody>().useGravity = false;
             //apply upward force 
@@ -111,6 +113,8 @@ public class GravityLiftSpell : MonoBehaviour {
         //for all enemies in list
         for (int i = 0; i < enemies.Count; i++)
         {
+            enemies[i].GetComponent<NavMeshAgent>().enabled = true;
+            enemies[i].GetComponent<EnemyAIVersion2>().enabled = true;
             //restore gravity
             enemies[i].GetComponent<Rigidbody>().useGravity = true;
             //apply upward force 

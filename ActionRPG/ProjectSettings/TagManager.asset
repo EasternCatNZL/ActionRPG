@@ -9,6 +9,7 @@ TagManager:
   - playerProgressionTag
   - Manager
   - Interactable
+  - Bullet
   layers:
   - Default
   - TransparentFX

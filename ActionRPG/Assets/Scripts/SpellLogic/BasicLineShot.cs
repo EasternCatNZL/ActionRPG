@@ -37,10 +37,13 @@ public class BasicLineShot : MonoBehaviour {
         {
             collision.gameObject.GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
         }
-        //regardless, create explosion object at impact point
-        GameObject impactClone = impactVfxObject;
-        Instantiate(impactClone, transform.position, transform.rotation);
-        //destroy self afterwards
-        Destroy(gameObject);
+        if (!collision.gameObject.CompareTag("Bullet"))
+        {
+            //regardless, create explosion object at impact point
+            GameObject impactClone = impactVfxObject;
+            Instantiate(impactClone, transform.position, transform.rotation);
+            //destroy self afterwards
+            Destroy(gameObject);
+        }
     }
 }

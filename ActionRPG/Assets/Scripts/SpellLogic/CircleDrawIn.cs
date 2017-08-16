@@ -28,6 +28,7 @@ public class CircleDrawIn : MonoBehaviour {
 
     private float startTime = 0.0f; //time this spell started, for timing
     private bool hasDealtDamage = false; //checks if damage has been dealt
+    private GameObject player = null;
 
     // Use this for initialization
     void Start () {
@@ -82,8 +83,16 @@ public class CircleDrawIn : MonoBehaviour {
     //calls opening spell effects
     private void SpellStart()
     {
-        GetAllInArea();
-        PullIn();
+        player = PlayerManager.GetPlayer();
+        if (player.GetComponent<ResourceManagement>().GetMana() >= resourceCost)
+        {
+            player.GetComponent<ResourceManagement>().DamageMana(resourceCost);
+            player.GetComponent<PlayerMovement>().StopMovement();
+            player.GetComponent<PlayerMovement>().FacePosition(transform.position);
+            player.GetComponent<Animator>().SetTrigger("Attack");
+            GetAllInArea();
+            PullIn();
+        }
     }
 
     //apply damage, called at set time

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpellActivationBehaviour : MonoBehaviour {
+public class SpellActivationBehaviour : MonoBehaviour
+{
 
     //mouse target ref
     private MouseTarget mouseTarget;
@@ -30,15 +31,19 @@ public class SpellActivationBehaviour : MonoBehaviour {
     [HideInInspector]
     public bool SpellFourLearned = false;
 
+    private GameObject player = null;
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         mouseTarget = Camera.main.GetComponent<MouseTarget>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         UseSpell();
-	}
+    }
 
     //when pressing keyboard keys, use spell
     void UseSpell()
@@ -77,6 +82,12 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Quaternion rotationDirection = new Quaternion();
         rotationDirection = Quaternion.LookRotation(directionToFire);
         //rotationDirection.eulerAngles = directionToFire;
+        player = PlayerManager.GetPlayer();
+        player.GetComponent<ResourceManagement>().DamageMana(1f);
+        player.GetComponent<PlayerMovement>().StopMovement();
+        player.GetComponent<PlayerMovement>().FacePosition(transform.position + directionToFire);
+        player.GetComponent<Animator>().SetTrigger("Attack");
+
         //create a shot and fire it
         GameObject bulletClone = basicBullet;
         Instantiate(bulletClone, transform.position + new Vector3(0f, 0.5f, 0f), rotationDirection);

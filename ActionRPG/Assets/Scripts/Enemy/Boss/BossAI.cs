@@ -11,15 +11,17 @@ public class BossAI : MonoBehaviour {
     public GameObject Opening;
 
     [Header("Attack Properties")]
-    public float AttackCooldown = 1.0f;
+   
     [Header("Random Attack Properties")]
     public GameObject bomb = null;
+    public float AttackCooldown = 1.0f;
     public float castRadius = 5.0f;
     public float attackRadius = 1.0f;
     public float attackDamage = 2.0f;
     public float attackDelay = 2.0f;
     private bool CanRandAttack = true;
     [Header("Pullin' Attack Properties")]
+    public float PullCooldown = 5.0f;
     public float pullStrength = 4.0f;
     public GameObject boulder = null;
     public float boulderSpawnRadius = 1.0f;
@@ -29,6 +31,7 @@ public class BossAI : MonoBehaviour {
     private EnemyResourceBehaviour HealthManager;
 
     private float lastAttackTime = 0f;
+    private float lastPullTime = 0f;
 
     private Vector3 lastAttackPos = Vector3.zero;
 
@@ -49,16 +52,20 @@ public class BossAI : MonoBehaviour {
 
     private void Update()
     {
-        if(Time.time - lastAttackTime > AttackCooldown)
+        if (!CanPull && HealthManager.GetHealthPercentage() < 0.5f)
+        {
+            CanPull = true;
+        }
+        if (Time.time - lastAttackTime > AttackCooldown)
         {
             if (CanRandAttack) AttackRandomArea();
-            if(CanPull) ConsumeAttack();
-            else if(HealthManager.GetHealthPercentage() < 0.5f)
-            {
-                CanPull = true;
-            }
-
             lastAttackTime = Time.time;
+        }
+        if (Time.time - lastPullTime > PullCooldown)
+        {
+            if (CanPull) ConsumeAttack();
+            lastPullTime = Time.time;
+            PullCooldown = Random.Range(3, 6);
         }
     }
 
@@ -93,13 +100,13 @@ public class BossAI : MonoBehaviour {
         Direction.Normalize();
         Player.GetComponent<Rigidbody>().AddForce(Direction * pullStrength, ForceMode.Impulse);
         //Create Boulder
-        GameObject temp = null;
-        int r = Random.Range(0, 360);
-        Vector3 SpawnPos = new Vector3(Mathf.Sin(r * PI / 180f) * boulderSpawnRadius, 0.0f, Mathf.Cos(r * PI / 180f) * boulderSpawnRadius) + transform.position;
-        temp = Instantiate(boulder, SpawnPos, Quaternion.identity);
-        Direction = transform.position - SpawnPos;
-        Direction.Normalize();
-        temp.GetComponent<Rigidbody>().AddForce(Direction * boulderSpeed, ForceMode.Impulse);
+        //GameObject temp = null;
+        //int r = Random.Range(0, 360);
+        //Vector3 SpawnPos = new Vector3(Mathf.Sin(r * PI / 180f) * boulderSpawnRadius, 0.0f, Mathf.Cos(r * PI / 180f) * boulderSpawnRadius) + transform.position;
+        //temp = Instantiate(boulder, SpawnPos, Quaternion.identity);
+        //Direction = transform.position - SpawnPos;
+        //Direction.Normalize();
+        //temp.GetComponent<Rigidbody>().AddForce(Direction * boulderSpeed, ForceMode.Impulse);
     }
 
     private void OnDrawGizmos()

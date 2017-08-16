@@ -437,13 +437,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8415ff080f924ae418815b9605fcfd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectRadius: 4
+  effectRadius: 2
   spellLifetime: 2
-  damageTime: 1
+  damageTime: 0
   damageValue: 2
-  resourceCost: 1
-  pullForce: 1.2
-  upwardPull: 0.5
+  resourceCost: 5
+  pullForce: 3
+  upwardPull: 1
 --- !u!198 &198107565982502034
 ParticleSystem:
   m_ObjectHideFlags: 1
