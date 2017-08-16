@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAIVersion2 : MonoBehaviour {
+public class EnemyAIVersion2 : MonoBehaviour
+{
 
     public NavMeshAgent NavAgent;
 
@@ -43,15 +44,16 @@ public class EnemyAIVersion2 : MonoBehaviour {
     private Animator Animator;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
         NavAgent = GetComponent<NavMeshAgent>();
         NavAgent.updatePosition = true;
 
         Target = GameObject.FindGameObjectWithTag("Player");
-        Player = GameObject.FindGameObjectWithTag("Player").transform;      
-       
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
+
         Waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         WaypointIndex = Random.Range(0, Waypoints.Length);
 
@@ -62,7 +64,7 @@ public class EnemyAIVersion2 : MonoBehaviour {
         Animator = GetComponent<Animator>();
 
         StartCoroutine("FSM");
-	}
+    }
 
     void Update()
     {
@@ -71,7 +73,7 @@ public class EnemyAIVersion2 : MonoBehaviour {
 
     IEnumerator FSM() //finite state machine
     {
-        while(alive)
+        while (alive)
         {
             switch (state)
             {
@@ -94,13 +96,13 @@ public class EnemyAIVersion2 : MonoBehaviour {
         NavAgent.speed = WanderSpeed;
         if (Vector3.Distance(this.transform.position, Waypoints[WaypointIndex].transform.position) >= 2)
         {
-            NavAgent.SetDestination(Waypoints[WaypointIndex].transform.position);            
+            NavAgent.SetDestination(Waypoints[WaypointIndex].transform.position);
         }
-        else if(Vector3.Distance(this.transform.position, Waypoints[WaypointIndex].transform.position) <= 2)
+        else if (Vector3.Distance(this.transform.position, Waypoints[WaypointIndex].transform.position) <= 2)
         {
             WaypointIndex = Random.Range(0, Waypoints.Length);
         }
-        if(DistanceToPlayer < 5.0f)
+        if (DistanceToPlayer < 5.0f)
         {
             state = EnemyAIVersion2.State.SEEK;
         }
@@ -110,11 +112,11 @@ public class EnemyAIVersion2 : MonoBehaviour {
     {
         NavAgent.speed = SeekSpeed;
         NavAgent.SetDestination(Target.transform.position);
-        if(DistanceToPlayer > 4.0f)
+        if (DistanceToPlayer > 4.0f)
         {
             state = EnemyAIVersion2.State.ATTACK;
         }
-        if(DistanceToPlayer > 8.0f)
+        if (DistanceToPlayer > 8.0f)
         {
             state = EnemyAIVersion2.State.WANDER;
         }
@@ -126,33 +128,33 @@ public class EnemyAIVersion2 : MonoBehaviour {
         NavAgent.speed = SeekSpeed;
         NavAgent.SetDestination(Target.transform.position);
 
-        if(DistanceToPlayer < 6.0 && DistanceToPlayer > 2.0f)
+        if (DistanceToPlayer < 6.0 && DistanceToPlayer > 2.0f)
         {
             PlayRangedParticle();
-        } 
-        else if(DistanceToPlayer < 1.2f)
+        }
+        else if (DistanceToPlayer < 1.2f)
         {
             RangedParticle.Stop();
             NavAgent.isStopped = true;
             PlayMeleeParticle();
-            
+
         }
-        else if(DistanceToPlayer > 1.2f)
+        else if (DistanceToPlayer > 1.2f)
         {
             NavAgent.isStopped = false;
             MeleeParticle.Stop();
             ResetTimer();
         }
-        else if(DistanceToPlayer > 6.5f)
+        else if (DistanceToPlayer > 6.5f)
         {
             RangedParticle.Stop();
             state = EnemyAIVersion2.State.SEEK;
         }
     }
-    
+
     void PlayMeleeParticle()
     {
-        if(MeleeParticle.isPlaying)
+        if (MeleeParticle.isPlaying)
         {
             DamageOverTime();
         }
@@ -161,7 +163,7 @@ public class EnemyAIVersion2 : MonoBehaviour {
             MeleeParticle.Play();
         }
     }
-    
+
     void PlayRangedParticle()
     {
         //print("in PlayRangedParticle");
@@ -174,22 +176,28 @@ public class EnemyAIVersion2 : MonoBehaviour {
             NavAgent.isStopped = true;
             if (RangedParticle.isStopped)
             {
+                LookAtPlayer();
                 RangedParticle.Play();
                 Instantiate(Bullet, transform.position + new Vector3(0.0f, 0.5f, 0.0f), transform.rotation);
                 //print("fire!");
             }
         }
     }
-    
+
     void DamageOverTime()
     {
         DOT_Timer = Start_Time += Time.deltaTime;
         DOTDamage = DOT_Timer * MeleeDamage;
         Target.GetComponent<ResourceManagement>().DamageHealth(DOTDamage);
     }
-    
+
     void ResetTimer()
     {
         Start_Time = 0.0f;
-    }   
+    }
+
+    void LookAtPlayer()
+    {
+        transform.LookAt(Player);
+    }
 }
