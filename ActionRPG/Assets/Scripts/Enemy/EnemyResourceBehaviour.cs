@@ -47,6 +47,7 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     {
         if (healthValue <= 0)
         {
+            if (GetComponent<EnemyAIVersion2>()) GetComponent<EnemyAIVersion2>().enabled = false;
             //call dead funcs
             DropLoot();
             GiveExp();

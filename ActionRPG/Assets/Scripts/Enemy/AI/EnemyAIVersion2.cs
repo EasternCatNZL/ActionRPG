@@ -63,7 +63,7 @@ public class EnemyAIVersion2 : MonoBehaviour
 
         Animator = GetComponent<Animator>();
 
-        StartCoroutine("FSM");
+        //StartCoroutine("FSM");
     }
 
     void Update()
@@ -71,23 +71,19 @@ public class EnemyAIVersion2 : MonoBehaviour
         DistanceToPlayer = Vector3.Distance(Player.position, transform.position);
     }
 
-    IEnumerator FSM() //finite state machine
+    private void LateUpdate()
     {
-        while (alive)
+        switch (state)
         {
-            switch (state)
-            {
-                case State.WANDER:
-                    Wander();
-                    break;
-                case State.SEEK:
-                    Seek();
-                    break;
-                case State.ATTACK:
-                    Attack();
-                    break;
-            }
-            yield return null;
+            case State.WANDER:
+                Wander();
+                break;
+            case State.SEEK:
+                Seek();
+                break;
+            case State.ATTACK:
+                Attack();
+                break;
         }
     }
 
