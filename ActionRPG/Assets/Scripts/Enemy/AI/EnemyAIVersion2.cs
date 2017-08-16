@@ -31,16 +31,13 @@ public class EnemyAIVersion2 : MonoBehaviour {
     private Transform Player;
 
     //variables for ATTACK
-    public float AttackSpeed = 1.5f;
     public ShrimpBullet Bullet;
     public ParticleSystem MeleeParticle;
     public ParticleSystem RangedParticle;
     private float Start_Time = 0.0f;
     private float DOT_Timer;
-    private bool CanDamage = false;
     public float MeleeDamage = 0.01f;
-    private float DOTDamage = 0.0f;
-
+    private float DOTDamage;
 
     //Animations
     private Animator Animator;
@@ -126,17 +123,16 @@ public class EnemyAIVersion2 : MonoBehaviour {
 
     void Attack()
     {
-        NavAgent.speed = AttackSpeed;
+        NavAgent.speed = SeekSpeed;
         NavAgent.SetDestination(Target.transform.position);
 
-        if(DistanceToPlayer < 6.0 && DistanceToPlayer > 4.0f)
+        if(DistanceToPlayer < 6.0 && DistanceToPlayer > 2.0f)
         {
             PlayRangedParticle();
         } 
         else if(DistanceToPlayer < 1.2f)
         {
             RangedParticle.Stop();
-            CanDamage = true;
             NavAgent.isStopped = true;
             PlayMeleeParticle();
             
@@ -144,7 +140,6 @@ public class EnemyAIVersion2 : MonoBehaviour {
         else if(DistanceToPlayer > 1.2f)
         {
             NavAgent.isStopped = false;
-            CanDamage = false;
             MeleeParticle.Stop();
             ResetTimer();
         }
@@ -188,9 +183,9 @@ public class EnemyAIVersion2 : MonoBehaviour {
     
     void DamageOverTime()
     {
-
-
-        //Target.GetComponent<ResourceManagement>().DamageHealth(DOTDamage);
+        DOT_Timer = Start_Time += Time.deltaTime;
+        DOTDamage = DOT_Timer * MeleeDamage;
+        Target.GetComponent<ResourceManagement>().DamageHealth(DOTDamage);
     }
     
     void ResetTimer()
