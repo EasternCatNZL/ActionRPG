@@ -38,7 +38,6 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     public void DecreaseHealth(float damage)
     {
         healthValue -= damage;
-        print(healthValue);
         if(HealthBar) HealthBar.SetPercentage(healthValue / maxHealth);
         CheckDead();
     }
@@ -88,5 +87,10 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     private void GiveExp()
     {
         progressionManager.IncreaseExp(expGiven);
+    }
+
+    public float GetHealthPercentage()
+    {
+        return healthValue / maxHealth;
     }
 }

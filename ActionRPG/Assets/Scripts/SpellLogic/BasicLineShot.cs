@@ -30,7 +30,7 @@ public class BasicLineShot : MonoBehaviour {
         myRigid.position += transform.forward * flightSpeed;
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         //if colliding with an enemy, deal damage
         if (collision.gameObject.CompareTag("Enemy"))

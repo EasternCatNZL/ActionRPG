@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4316976812391466}
   - component: {fileID: 198696481601352144}
+  - component: {fileID: 114872259153206408}
   - component: {fileID: 199742628578609344}
   m_Layer: 0
   m_Name: ShrimpRangedImpactVFX
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114872259153206408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1524056476066560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e10d935e30692445958f0216c7f55e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198696481601352144
 ParticleSystem:
   m_ObjectHideFlags: 1

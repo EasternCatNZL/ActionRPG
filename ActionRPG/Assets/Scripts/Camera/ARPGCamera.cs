@@ -26,6 +26,7 @@ public class ARPGCamera : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+
         //Set intial arm position
         Vector3 ArmPosition = new Vector3(0.0f, HeightOffset, 0.0f);
         transform.position = ArmPosition;
@@ -38,7 +39,13 @@ public class ARPGCamera : MonoBehaviour {
         Vector3 CameraRotation = new Vector3(CameraAngle, 0.0f, 0.0f);
         transform.rotation = Quaternion.Euler(CameraRotation);
 
-	}
+        if (!TrackingTarget)
+        {
+            Debug.LogError("Tracking target has not been set for the camera");
+            TrackingTarget = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -65,7 +72,7 @@ public class ARPGCamera : MonoBehaviour {
             }
         }
         //Update position to tracked object
-        transform.position = TrackingTarget.position + new Vector3(0.0f, HeightOffset, 0.0f);
+        if(TrackingTarget) transform.position = TrackingTarget.position + new Vector3(0.0f, HeightOffset, 0.0f);
 	}
 
     public void MoveCamera(float _Zoom, float _Angle)
@@ -75,5 +82,17 @@ public class ARPGCamera : MonoBehaviour {
 
         Vector3 CameraRotation = new Vector3(_Angle, 0.0f, 0.0f);
         transform.DORotate(CameraRotation, 1.0f);
+    }
+
+    public static void ShakeCamera(float _Duration)
+    {
+        Transform CamTransform = Camera.main.transform;
+        if(!CamTransform)
+        {
+            Debug.LogError("No camera exists to shake");
+            return;
+        }
+
+        CamTransform.DOShakePosition(_Duration);
     }
 }
