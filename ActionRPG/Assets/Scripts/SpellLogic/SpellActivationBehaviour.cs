@@ -50,21 +50,21 @@ public class SpellActivationBehaviour : MonoBehaviour {
         else if (Input.GetKeyDown(KeyCode.W))
         {
             //PrepareSpellOne();
-            UseSpellTwo();
+            UseShockwave();
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
             //PrepareSpellTwo();
-            UseSpellThree();
+            UsePushOut();
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
             //PrepareSpellThree();
-            UseSpellFour();
+            UseGravityDrop();
         }
         else if (Input.GetKeyDown(KeyCode.T))
         {
-            UseSpellFive();
+            UseDonutSpell();
         }
     }
 
@@ -82,26 +82,9 @@ public class SpellActivationBehaviour : MonoBehaviour {
         Instantiate(bulletClone, transform.position + new Vector3(0f, 0.5f, 0f), rotationDirection);
     }
 
-    ////uses spell 1 - big shot
-    //void UseSpellOne()
-    //{
-    //    //get the direction of mouse from self
-    //    //mouseTarget.GetWorldMousePos();
-    //    Vector3 directionToFire = MouseTarget.GetWorldMousePos() - transform.position;
-    //    Quaternion rotationDirection = new Quaternion();
-    //    rotationDirection = Quaternion.LookRotation(directionToFire);
-    //    //rotationDirection.eulerAngles = directionToFire;
-    //    //create a shot and fire it
-    //    GameObject bulletClone = biggerBullet;
-    //    //spawn into the world
-    //    Instantiate(bulletClone, transform.position, rotationDirection);
-    //}
-
     ///use spell two - pull in
-    void UseSpellTwo()
+    void UseShockwave()
     {
-        //get the location of target
-        //mouseTarget.GetWorldMousePos();
         //create spell and fire it
         GameObject spellClone = Shockwave;
         //spawn into the world
@@ -109,21 +92,17 @@ public class SpellActivationBehaviour : MonoBehaviour {
     }
 
     //use spell three - push away
-    void UseSpellThree()
+    void UsePushOut()
     {
-        //get the location of target
-        //mouseTarget.GetWorldMousePos();
         //create spell and fire it
         GameObject spellClone = PushOut;
         //spawn into the world
-
+        Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
     }
 
     //use spell four - lift and drop
-    void UseSpellFour()
+    void UseGravityDrop()
     {
-        //get the location of target
-        //mouseTarget.GetWorldMousePos();
         //create spell and fire it
         GameObject spellClone = GravityLift;
         //spawn into the world
@@ -131,14 +110,12 @@ public class SpellActivationBehaviour : MonoBehaviour {
     }
 
     //use spell five - gravity well draw in
-    void UseSpellFive()
+    void UseDonutSpell()
     {
-        //get the location of target
-        //mouseTarget.GetWorldMousePos();
         //create spell and fire it
         GameObject spellClone = DonutSpell;
         //spawn into the world
-        Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
+        Instantiate(spellClone, transform.position, transform.rotation);
     }
 
 
