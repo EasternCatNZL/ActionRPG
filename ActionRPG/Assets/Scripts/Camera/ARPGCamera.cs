@@ -76,4 +76,16 @@ public class ARPGCamera : MonoBehaviour {
         Vector3 CameraRotation = new Vector3(_Angle, 0.0f, 0.0f);
         transform.DORotate(CameraRotation, 1.0f);
     }
+
+    public static void ShakeCamera(float _Duration)
+    {
+        Transform CamTransform = Camera.main.transform;
+        if(!CamTransform)
+        {
+            Debug.LogError("No camera exists to shake");
+            return;
+        }
+
+        CamTransform.DOShakePosition(_Duration);
+    }
 }

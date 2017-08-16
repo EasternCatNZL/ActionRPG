@@ -75,6 +75,10 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
+        else
+        {
+            MovePosition = transform.position;
+        }
         //Continue to move the player forward after mouse click
         if (Vector3.Distance(transform.position, MovePosition) > Deadzone)
         {
@@ -88,5 +92,10 @@ public class PlayerMovement : MonoBehaviour
             Animator.SetBool("Moving", false);
         }
         Debug.DrawLine(transform.position, MovePosition, Color.red);
+    }
+
+    public void SetSpeed(float _Speed)
+    {
+        Speed = _Speed;
     }
 }

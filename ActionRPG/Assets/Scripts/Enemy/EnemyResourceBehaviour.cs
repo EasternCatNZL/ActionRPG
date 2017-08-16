@@ -89,4 +89,9 @@ public class EnemyResourceBehaviour : MonoBehaviour {
     {
         progressionManager.IncreaseExp(expGiven);
     }
+
+    public float GetHealthPercentage()
+    {
+        return healthValue / maxHealth;
+    }
 }
