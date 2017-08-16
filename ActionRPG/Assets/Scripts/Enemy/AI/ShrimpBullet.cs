@@ -6,7 +6,7 @@ public class ShrimpBullet : MonoBehaviour {
 
     [Header("Bullet vars")]
     [Tooltip("Flight speed")]
-    public float flightSpeed = 1.5f;
+    public float flightSpeed = 0.54f;
     [Tooltip("Amount of damage bullet deals")]
     public float damageValue = 0.5f;
     [Tooltip("Impact particle gameobject")]
@@ -15,9 +15,10 @@ public class ShrimpBullet : MonoBehaviour {
     private Rigidbody myRigid; //rigidbody ref
     private float startTime = 0.0f;
 
+    
     // Use this for initialization
     void Start () {
-		
+        myRigid = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -30,7 +31,7 @@ public class ShrimpBullet : MonoBehaviour {
         //if colliding with an enemy, deal damage
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<EnemyResourceBehaviour>().DecreaseHealth(damageValue);
+            collision.gameObject.GetComponent<ResourceManagement>().DamageHealth(damageValue);
         }
         //regardless, create explosion object at impact point
         GameObject impactClone = impactParticle;

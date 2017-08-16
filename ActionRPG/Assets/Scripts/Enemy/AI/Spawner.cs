@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour {
     public Transform[] SpawnPoints;
 
     private int EnemyCount = 0;
-    private int MaxEnemyCount = 10;
+    public int MaxEnemyCount = 10;
 
     // Use this for initialization
 	void Start () {

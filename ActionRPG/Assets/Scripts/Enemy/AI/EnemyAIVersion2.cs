@@ -10,7 +10,8 @@ public class EnemyAIVersion2 : MonoBehaviour {
     public enum State
     {
         WANDER,
-        SEEK
+        SEEK,
+        ATTACK
     }
 
     public State state;
@@ -28,6 +29,18 @@ public class EnemyAIVersion2 : MonoBehaviour {
     public float RotationSpeed = 3.0f;
     private GameObject Target;
     private Transform Player;
+
+    //variables for ATTACK
+    public float AttackSpeed = 1.5f;
+    public ShrimpBullet Bullet;
+    public ParticleSystem MeleeParticle;
+    public ParticleSystem RangedParticle;
+    private float Start_Time = 0.0f;
+    private float DOT_Timer;
+    private bool CanDamage = false;
+    public float MeleeDamage = 0.01f;
+    private float DOTDamage = 0.0f;
+
 
     //Animations
     private Animator Animator;
@@ -57,7 +70,6 @@ public class EnemyAIVersion2 : MonoBehaviour {
     void Update()
     {
         DistanceToPlayer = Vector3.Distance(Player.position, transform.position);
-        CheckSeekRange();
     }
 
     IEnumerator FSM() //finite state machine
@@ -71,6 +83,9 @@ public class EnemyAIVersion2 : MonoBehaviour {
                     break;
                 case State.SEEK:
                     Seek();
+                    break;
+                case State.ATTACK:
+                    Attack();
                     break;
             }
             yield return null;
@@ -88,36 +103,98 @@ public class EnemyAIVersion2 : MonoBehaviour {
         {
             WaypointIndex = Random.Range(0, Waypoints.Length);
         }
+        if(DistanceToPlayer < 5.0f)
+        {
+            state = EnemyAIVersion2.State.SEEK;
+        }
     }
 
     void Seek()
     {
         NavAgent.speed = SeekSpeed;
         NavAgent.SetDestination(Target.transform.position);
-        if(DistanceToPlayer <= 1.0f)
+        if(DistanceToPlayer > 4.0f)
         {
-            NavAgent.isStopped = true;
+            state = EnemyAIVersion2.State.ATTACK;
         }
-        else if(DistanceToPlayer > 1.0f)
-        {
-            NavAgent.isStopped = false;
-        }
-        if(DistanceToPlayer > 10.0f)
+        if(DistanceToPlayer > 8.0f)
         {
             state = EnemyAIVersion2.State.WANDER;
         }
 
     }
 
-    void CheckSeekRange()
+    void Attack()
     {
-        if(DistanceToPlayer < 5.0f)
+        NavAgent.speed = AttackSpeed;
+        NavAgent.SetDestination(Target.transform.position);
+
+        if(DistanceToPlayer < 6.0 && DistanceToPlayer > 4.0f)
         {
+            PlayRangedParticle();
+        } 
+        else if(DistanceToPlayer < 1.2f)
+        {
+            RangedParticle.Stop();
+            CanDamage = true;
+            NavAgent.isStopped = true;
+            PlayMeleeParticle();
+            
+        }
+        else if(DistanceToPlayer > 1.2f)
+        {
+            NavAgent.isStopped = false;
+            CanDamage = false;
+            MeleeParticle.Stop();
+            ResetTimer();
+        }
+        else if(DistanceToPlayer > 6.5f)
+        {
+            RangedParticle.Stop();
             state = EnemyAIVersion2.State.SEEK;
+        }
+    }
+    
+    void PlayMeleeParticle()
+    {
+        if(MeleeParticle.isPlaying)
+        {
+            DamageOverTime();
         }
         else
         {
-            state = EnemyAIVersion2.State.WANDER;
+            MeleeParticle.Play();
         }
+    }
+    
+    void PlayRangedParticle()
+    {
+        //print("in PlayRangedParticle");
+        if (RangedParticle.isPlaying)
+        {
+            //print("in if RangedPaticle.isPlaying");
+        }
+        else
+        {
+            NavAgent.isStopped = true;
+            if (RangedParticle.isStopped)
+            {
+                RangedParticle.Play();
+                Instantiate(Bullet, transform.position + new Vector3(0.0f, 0.5f, 0.0f), transform.rotation);
+                //print("fire!");
+            }
+        }
+    }
+    
+    void DamageOverTime()
+    {
+
+
+        //Target.GetComponent<ResourceManagement>().DamageHealth(DOTDamage);
+    }
+    
+    void ResetTimer()
+    {
+        Start_Time = 0.0f;
     }   
 }
