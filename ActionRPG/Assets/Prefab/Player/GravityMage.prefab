@@ -1122,7 +1122,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1038248258693994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.266604, y: 0.009648323, z: 16.114809}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4001323681509776}
@@ -1355,11 +1355,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabae49ef23882240853df3c49df6393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicBullet: {fileID: 0}
-  Shockwave: {fileID: 0}
-  PushOut: {fileID: 0}
-  GravityLift: {fileID: 0}
-  DonutSpell: {fileID: 0}
+  basicBullet: {fileID: 1270388312040072, guid: 6d8bb6054fc977047ae6dbbfd47700bb,
+    type: 2}
+  Shockwave: {fileID: 1036824766867770, guid: df99196d3ce5c3c47b6a3a3588f98adc, type: 2}
+  PushOut: {fileID: 1878716221031060, guid: a1af488f27612b04a8bb213d4714c98d, type: 2}
+  GravityLift: {fileID: 1783060964329678, guid: bd3524c12b63cdc4bb6f5c741df048d1,
+    type: 2}
+  DonutSpell: {fileID: 1893899398232184, guid: d208a004030115847a6d485e1ef95f77, type: 2}
   SpellOneLearned: 0
   SpellTwoLearned: 0
   SpellThreeLearned: 0
