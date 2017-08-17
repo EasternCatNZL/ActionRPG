@@ -17,14 +17,14 @@ public class TownProgression : MonoBehaviour {
     public GameObject playerObject;
 
     //control variables
-    private enum TownCurrentState
+    public enum TownCurrentState
     {
         Starting,
         Progressed,
         Complete
     }
 
-    private TownCurrentState currentState = TownCurrentState.Starting; //current state of the town
+    public TownCurrentState currentState = TownCurrentState.Starting; //current state of the town
 
 	// Use this for initialization
 	void Start () {

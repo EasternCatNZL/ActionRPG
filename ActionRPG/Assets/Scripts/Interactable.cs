@@ -7,6 +7,7 @@ public class Interactable : MonoBehaviour {
 
     public bool CanInteract = false;
     public bool LoadLevel = false;
+    public bool progressFlag = false;
     public int SceneNumber = 0;
 
     //Interaction not triggering? Does the mouse manager exist?
@@ -15,6 +16,18 @@ public class Interactable : MonoBehaviour {
     {
         if (CanInteract)
         {
+            if (progressFlag)
+            {
+                TownProgression townProgression = GameObject.FindGameObjectWithTag("Manager").GetComponent<TownProgression>();
+                if (townProgression.currentState == TownProgression.TownCurrentState.Starting)
+                {
+                    townProgression.currentState = TownProgression.TownCurrentState.Progressed;
+                }
+                else if(townProgression.currentState == TownProgression.TownCurrentState.Progressed)
+                {
+                    townProgression.currentState = TownProgression.TownCurrentState.Complete;
+                }
+            }
             if (LoadLevel)
             {
                 SceneManager.LoadScene(SceneNumber);
