@@ -707,6 +707,7 @@ MonoBehaviour:
   effectRadius: 2.5
   damageValue: 3
   spellLifetime: 2
+  resourceCost: 20
   pushForce: 10
   upwardPull: 5
 --- !u!198 &198021371847603418

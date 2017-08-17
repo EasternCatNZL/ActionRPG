@@ -15,12 +15,15 @@ public class CirclePushOut : MonoBehaviour {
     public float damageValue = 3.0f;
     [Tooltip("lifetime of the spell")]
     public float spellLifetime = 2.0f;
+    [Tooltip("Resource cost value")]
+    public float resourceCost = 1.0f;
     [Tooltip("The scale applied to push force")]
     public float pushForce = 1.2f;
     [Tooltip("Upward alteration to level out with units")]
     public float upwardPull = 0.5f;
 
     private float startTime = 0.0f; //time this spell started, for timing
+    private GameObject player;
 
     // Use this for initialization
     void Start () {
@@ -72,8 +75,10 @@ public class CirclePushOut : MonoBehaviour {
     private void Attack()
     {
         //does all logic then destroys self
+
         GetAllInArea();
         PushOut();
+        
         //Destroy(gameObject);
     }
 }

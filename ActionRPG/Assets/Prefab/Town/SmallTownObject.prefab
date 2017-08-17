@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanInteract: 1
   LoadLevel: 1
-  SceneNumber: 2
+  SceneNumber: 1
 --- !u!114 &114940400982906896
 MonoBehaviour:
   m_ObjectHideFlags: 1

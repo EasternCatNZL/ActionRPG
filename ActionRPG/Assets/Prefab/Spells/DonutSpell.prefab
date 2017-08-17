@@ -197,7 +197,7 @@ MonoBehaviour:
   outerRadius: 3
   innerRadius: 1
   spellLifetime: 4
-  resourceCost: 2
+  resourceCost: 10
   damageValue: 0.2
   slowAmount: 0.8
   tickTime: 0.3

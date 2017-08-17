@@ -103,38 +103,70 @@ public class SpellActivationBehaviour : MonoBehaviour
     ///use spell two - pull in
     void UseShockwave()
     {
-        //create spell and fire it
-        GameObject spellClone = Shockwave;
-        //spawn into the world
-        Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
+        player = PlayerManager.GetPlayer();
+        if (player.GetComponent<ResourceManagement>().GetMana() >= Shockwave.GetComponent<CircleDrawIn>().resourceCost)
+        {
+            player.GetComponent<ResourceManagement>().DamageMana(Shockwave.GetComponent<CircleDrawIn>().resourceCost);
+            player.GetComponent<PlayerMovement>().StopMovement();
+            player.GetComponent<PlayerMovement>().FacePosition(transform.position);
+            player.GetComponent<Animator>().SetTrigger("Attack");
+            //create spell and fire it
+            GameObject spellClone = Shockwave;
+            //spawn into the world
+            Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
+        }
     }
 
     //use spell three - push away
     void UsePushOut()
     {
-        //create spell and fire it
-        GameObject spellClone = PushOut;
-        //spawn into the world
-        Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
+        player = PlayerManager.GetPlayer();
+        if (player.GetComponent<ResourceManagement>().GetMana() >= PushOut.GetComponent<CirclePushOut>().resourceCost)
+        {
+            player.GetComponent<ResourceManagement>().DamageMana(PushOut.GetComponent<CirclePushOut>().resourceCost);
+            player.GetComponent<PlayerMovement>().StopMovement();
+            player.GetComponent<PlayerMovement>().FacePosition(transform.position);
+            player.GetComponent<Animator>().SetTrigger("Attack");
+            //create spell and fire it
+            GameObject spellClone = PushOut;
+            //spawn into the world
+            Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
+        }
     }
 
     //use spell four - lift and drop
     void UseGravityDrop()
     {
-        //create spell and fire it
-        GameObject spellClone = GravityLift;
-        //spawn into the world
-        Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
+        player = PlayerManager.GetPlayer();
+        if (player.GetComponent<ResourceManagement>().GetMana() >= GravityLift.GetComponent<GravityLiftSpell>().resourceCost)
+        {
+            player.GetComponent<ResourceManagement>().DamageMana(GravityLift.GetComponent<GravityLiftSpell>().resourceCost);
+            player.GetComponent<PlayerMovement>().StopMovement();
+            player.GetComponent<PlayerMovement>().FacePosition(transform.position);
+            player.GetComponent<Animator>().SetTrigger("Attack");
+            //create spell and fire it
+            GameObject spellClone = GravityLift;
+            //spawn into the world
+            Instantiate(spellClone, MouseTarget.GetWorldMousePos(), Quaternion.identity);
+        }
     }
 
     //use spell five - gravity well draw in
     void UseDonutSpell()
     {
-        //create spell and fire it
-        GameObject spellClone = DonutSpell;
-        //spawn into the world
-        Instantiate(spellClone, transform.position, transform.rotation);
-        //spellClone.transform.SetParent(transform);
+        player = PlayerManager.GetPlayer();
+        if (player.GetComponent<ResourceManagement>().GetMana() >= DonutSpell.GetComponent<DonutGravityOrbit>().resourceCost)
+        {
+            player.GetComponent<ResourceManagement>().DamageMana(DonutSpell.GetComponent<DonutGravityOrbit>().resourceCost);
+            player.GetComponent<PlayerMovement>().StopMovement();
+            player.GetComponent<PlayerMovement>().FacePosition(transform.position);
+            player.GetComponent<Animator>().SetTrigger("Attack");
+            //create spell and fire it
+            GameObject spellClone = DonutSpell;
+            //spawn into the world
+            Instantiate(spellClone, transform.position, transform.rotation);
+            //spellClone.transform.SetParent(transform);
+        }
     }
 
 

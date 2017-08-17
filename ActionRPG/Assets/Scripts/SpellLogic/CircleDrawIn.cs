@@ -83,16 +83,10 @@ public class CircleDrawIn : MonoBehaviour {
     //calls opening spell effects
     private void SpellStart()
     {
-        player = PlayerManager.GetPlayer();
-        if (player.GetComponent<ResourceManagement>().GetMana() >= resourceCost)
-        {
-            player.GetComponent<ResourceManagement>().DamageMana(resourceCost);
-            player.GetComponent<PlayerMovement>().StopMovement();
-            player.GetComponent<PlayerMovement>().FacePosition(transform.position);
-            player.GetComponent<Animator>().SetTrigger("Attack");
+
             GetAllInArea();
             PullIn();
-        }
+      
     }
 
     //apply damage, called at set time

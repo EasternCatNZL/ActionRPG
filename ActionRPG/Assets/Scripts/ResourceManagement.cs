@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 //Manages the health and mana of entities
 public class ResourceManagement : MonoBehaviour {
@@ -74,6 +75,10 @@ public class ResourceManagement : MonoBehaviour {
         if(GetComponent<DropTableManager>())
         {
             GetComponent<DropTableManager>();
+        }
+        if(CurrentHealth <= 0)
+        {
+            SceneManager.LoadScene(0);
         }
         HealthBar.SetPercentage(CurrentHealth / MaxHealth);
     }

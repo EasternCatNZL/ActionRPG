@@ -556,6 +556,7 @@ MonoBehaviour:
   raiseForce: 0.8
   dropForce: 5
   spellLifetime: 3
+  resourceCost: 10
   disableTime: 3
   damageValue: 2
   raiseEndTime: 1

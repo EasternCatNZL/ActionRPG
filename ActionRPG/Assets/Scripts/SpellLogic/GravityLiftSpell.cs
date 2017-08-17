@@ -18,6 +18,8 @@ public class GravityLiftSpell : MonoBehaviour {
     public float dropForce = 5.0f;
     [Tooltip("the lifetime of the spell")]
     public float spellLifetime = 3.0f;
+    [Tooltip("Resource cost value")]
+    public float resourceCost = 1.0f;
     [Tooltip("sent to enemy, disables for this time")]
     public float disableTime = 3.0f;
     [Tooltip("set damage value <- multiply with stats?")]

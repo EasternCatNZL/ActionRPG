@@ -522,7 +522,7 @@ MonoBehaviour:
   spellLifetime: 2
   damageTime: 0
   damageValue: 2
-  resourceCost: 5
+  resourceCost: 15
   pullForce: 3
   upwardPull: 1
 --- !u!198 &198107565982502034

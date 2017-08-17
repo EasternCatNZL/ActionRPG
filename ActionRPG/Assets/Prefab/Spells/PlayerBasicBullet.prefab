@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flightSpeed: 0.1
-  damageValue: 0.5
+  damageValue: 2
   impactVfxObject: {fileID: 1647901325569144, guid: e2416d0193b702542a0979c2672063be,
     type: 2}
 --- !u!135 &135851387257208178
