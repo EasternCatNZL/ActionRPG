@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 136660030896647274}
   - component: {fileID: 114877309339152182}
   - component: {fileID: 114167839227993412}
+  - component: {fileID: 81046310205687224}
+  - component: {fileID: 82287869115928790}
   m_Layer: 10
   m_Name: GravityMage
   m_TagString: Player
@@ -1123,7 +1125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1038248258693994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.6, y: 0.009648323, z: 3.27}
+  m_LocalPosition: {x: 5.11, y: 0.009648323, z: 4.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4001323681509776}
@@ -1314,6 +1316,93 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!81 &81046310205687224
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038248258693994}
+  m_Enabled: 0
+--- !u!82 &82287869115928790
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038248258693994}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 896ff4c5c07ae9d44a12df732fe32794, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95700217177885042
 Animator:
   serializedVersion: 3
@@ -1359,10 +1448,10 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   ManaBar: {fileID: 0}
   MaxHealth: 100
-  HealthRegen: 0
+  HealthRegen: 1
   CurrentHealth: 0
-  MaxMana: 0
-  ManaRegen: 0
+  MaxMana: 100
+  ManaRegen: 2
 --- !u!114 &114877309339152182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1381,6 +1470,7 @@ MonoBehaviour:
   GravityLift: {fileID: 1783060964329678, guid: bd3524c12b63cdc4bb6f5c741df048d1,
     type: 2}
   DonutSpell: {fileID: 1893899398232184, guid: d208a004030115847a6d485e1ef95f77, type: 2}
+  basicBulletFireSound: {fileID: 82287869115928790}
   SpellOneLearned: 0
   SpellTwoLearned: 0
   SpellThreeLearned: 0

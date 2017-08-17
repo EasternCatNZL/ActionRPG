@@ -11,6 +11,8 @@ public class BasicLineShot : MonoBehaviour {
     public float damageValue = 0.5f;
     [Tooltip("Explosion vfx")]
     public GameObject impactVfxObject;
+    //[Tooltip("Sound effect")]
+    //public AudioSource bulletImpactSound;
 
     private Rigidbody myRigid; //rigidbody ref
     private float startTime = 0.0f;
@@ -42,6 +44,8 @@ public class BasicLineShot : MonoBehaviour {
             //regardless, create explosion object at impact point
             GameObject impactClone = impactVfxObject;
             Instantiate(impactClone, transform.position, transform.rotation);
+            ////play audio
+            //bulletImpactSound.Play();
             //destroy self afterwards
             Destroy(gameObject);
         }

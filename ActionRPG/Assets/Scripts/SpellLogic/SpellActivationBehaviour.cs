@@ -16,6 +16,10 @@ public class SpellActivationBehaviour : MonoBehaviour
     public GameObject GravityLift;
     public GameObject DonutSpell;
 
+    [Header("Spell sound effects")]
+    [Tooltip("Basic shot firing sound")]
+    public AudioSource basicBulletFireSound;
+
     ////indicator objects, displays on the ground
     //[Header("Indicators")]
     //public GameObject lineIndicator; //for line shots
@@ -91,6 +95,9 @@ public class SpellActivationBehaviour : MonoBehaviour
         //create a shot and fire it
         GameObject bulletClone = basicBullet;
         Instantiate(bulletClone, transform.position + new Vector3(0f, 0.5f, 0f), rotationDirection);
+
+        //play firing sound effect
+        basicBulletFireSound.Play();
     }
 
     ///use spell two - pull in
@@ -127,6 +134,7 @@ public class SpellActivationBehaviour : MonoBehaviour
         GameObject spellClone = DonutSpell;
         //spawn into the world
         Instantiate(spellClone, transform.position, transform.rotation);
+        //spellClone.transform.SetParent(transform);
     }
 
 

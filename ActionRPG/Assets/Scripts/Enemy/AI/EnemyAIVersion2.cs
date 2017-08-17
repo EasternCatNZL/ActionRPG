@@ -35,6 +35,8 @@ public class EnemyAIVersion2 : MonoBehaviour
     public ShrimpBullet Bullet;
     public ParticleSystem MeleeParticle;
     public ParticleSystem RangedParticle;
+    public AudioSource meleeSoundEffect;
+    public AudioSource rangedSoundEffect;
     private float Start_Time = 0.0f;
     private float DOT_Timer;
     public float MeleeDamage = 0.01f;
@@ -63,7 +65,7 @@ public class EnemyAIVersion2 : MonoBehaviour
 
         Animator = GetComponent<Animator>();
 
-        //StartCoroutine("FSM");
+        StartCoroutine("FSM");
     }
 
     void Update()
@@ -71,19 +73,23 @@ public class EnemyAIVersion2 : MonoBehaviour
         DistanceToPlayer = Vector3.Distance(Player.position, transform.position);
     }
 
-    private void LateUpdate()
+    IEnumerator FSM() //finite state machine
     {
-        switch (state)
+        while (alive)
         {
-            case State.WANDER:
-                Wander();
-                break;
-            case State.SEEK:
-                Seek();
-                break;
-            case State.ATTACK:
-                Attack();
-                break;
+            switch (state)
+            {
+                case State.WANDER:
+                    Wander();
+                    break;
+                case State.SEEK:
+                    Seek();
+                    break;
+                case State.ATTACK:
+                    Attack();
+                    break;
+            }
+            yield return null;
         }
     }
 
@@ -133,12 +139,13 @@ public class EnemyAIVersion2 : MonoBehaviour
             RangedParticle.Stop();
             NavAgent.isStopped = true;
             PlayMeleeParticle();
-
+            meleeSoundEffect.Play();
         }
         else if (DistanceToPlayer > 1.2f)
         {
             NavAgent.isStopped = false;
             MeleeParticle.Stop();
+            meleeSoundEffect.Stop();
             ResetTimer();
         }
         else if (DistanceToPlayer > 6.5f)
@@ -175,6 +182,7 @@ public class EnemyAIVersion2 : MonoBehaviour
                 LookAtPlayer();
                 RangedParticle.Play();
                 Instantiate(Bullet, transform.position + new Vector3(0.0f, 0.5f, 0.0f), transform.rotation);
+                rangedSoundEffect.Play();
                 //print("fire!");
             }
         }

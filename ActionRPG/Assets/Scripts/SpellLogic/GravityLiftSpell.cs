@@ -28,6 +28,9 @@ public class GravityLiftSpell : MonoBehaviour {
     public float dropTime = 1.5f;
     [Tooltip("Accompanying particle effect")]
     public ParticleSystem dropParticle;
+    [Tooltip("Slam Sound effect")]
+    public AudioSource slamSoundEffect;
+
 
     private float startTime = 0.0f;
 
@@ -47,7 +50,7 @@ public class GravityLiftSpell : MonoBehaviour {
         {
             Finished();
         }
-        else if (hasRaised && Time.time > startTime + dropTime)
+        else if (hasRaised && Time.time > startTime + dropTime && !hasDropped)
         {
             DropEnemies();
         }
@@ -124,6 +127,8 @@ public class GravityLiftSpell : MonoBehaviour {
         }
         //have particle play
         dropParticle.Play();
+        //play the sound
+        slamSoundEffect.Play();
         //set has dropped enemies to true
         hasDropped = true;
     }

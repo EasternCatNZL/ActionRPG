@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChildParticleLifetime : MonoBehaviour {
 
-    //public AudioSource sound;
+    public AudioSource sound;
 
     ParticleSystem partsSystem;
     float particleDuration;
@@ -16,7 +16,7 @@ public class ChildParticleLifetime : MonoBehaviour {
             partsSystem = GetComponentInChildren<ParticleSystem>();
         particleDuration = partsSystem.main.duration + partsSystem.main.startLifetimeMultiplier;
         //startTime = Time.time;
-        //if (sound) sound.Play();
+        if (sound) sound.Play();
         Destroy(gameObject, particleDuration);
     }
 	
