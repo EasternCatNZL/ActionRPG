@@ -122,8 +122,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1531034761429480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.88, y: 9.0550773e-17, z: -21.646}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -16.096424, y: -7.016634e-17, z: 6.18}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 4244292575741200}
   - {fileID: 4531792034658788}
@@ -172,7 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanInteract: 0
   LoadLevel: 1
-  SceneNumber: 0
+  progressFlag: 1
+  SceneNumber: 1
 --- !u!137 &137640224977493996
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
